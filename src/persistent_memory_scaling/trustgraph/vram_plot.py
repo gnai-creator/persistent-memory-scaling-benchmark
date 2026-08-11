@@ -11,7 +11,7 @@ from pathlib import Path
 os.environ.setdefault("MPLCONFIGDIR", "/tmp/pmsb-matplotlib")
 
 
-def render(data: dict, png: Path, svg: Path) -> None:
+def render(data: dict, png: Path, svg: Path, asm_reference: dict | None = None) -> None:
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -35,11 +35,24 @@ def render(data: dict, png: Path, svg: Path) -> None:
         label = f"{value:.2f} GB" if value else "0 B"
         axis.annotate(label, (bar.get_x() + bar.get_width() / 2, value), xytext=(0, 7),
                       textcoords="offset points", ha="center", color="#ffca5c", weight="bold")
-    axis.set_xticks(x, labels)
-    axis.set_ylabel("Mean memory (GB)")
+    if asm_reference is not None:
+        bridge_ram = asm_reference["resources"]["bridge_rss_peak_bytes"] / 1e9
+        bridge_vram = asm_reference["resources"]["bridge_vram_peak_bytes"] / 1e9
+        axis.scatter([2], [bridge_ram], marker="D", s=90, color="#7aa2f7", zorder=6,
+                     label="ASM-CM + Bridge 8.1 peak RSS reference")
+        axis.annotate(
+            f"ASM-CM + Bridge 8.1\n{bridge_ram:.3f} GB peak RSS; "
+            f"{bridge_vram:.0f} B attributed VRAM",
+            (2, bridge_ram), xytext=(0, 25), textcoords="offset points",
+            ha="center", color="#7aa2f7", weight="bold",
+        )
+        axis.set_xticks([0, 1, 2], labels + ["ASM operational"])
+    else:
+        axis.set_xticks(x, labels)
+    axis.set_ylabel("Memory (GB; statistic labeled)")
     axis.set_ylim(0, max(ram) * 1.18)
-    axis.set_title("TrustGraph stack memory footprint — TG-2 (30 s idle mean)", fontsize=18, weight="bold")
-    axis.text(.5, -.14, "30 s mean, not peak. Only TrustGraph resources are shown; system and ASM are excluded.",
+    axis.set_title("TrustGraph stack vs. ASM-CM operational memory", fontsize=18, weight="bold")
+    axis.text(.5, -.14, "TrustGraph bars: 30 s mean. ASM diamond: separate Phase 8.1 peak RSS; reader excluded.",
               transform=axis.transAxes, ha="center", color="#a9b1d6")
     axis.grid(axis="y", alpha=.2)
     axis.legend(ncol=2, fontsize=10)
@@ -54,9 +67,12 @@ def main() -> int:
     parser.add_argument("--input", required=True)
     parser.add_argument("--png", required=True)
     parser.add_argument("--svg", required=True)
+    parser.add_argument("--asm-reference")
     args = parser.parse_args()
     data = json.loads(Path(args.input).read_text(encoding="utf-8"))
-    render(data, Path(args.png), Path(args.svg))
+    asm_reference = (json.loads(Path(args.asm_reference).read_text(encoding="utf-8"))
+                     if args.asm_reference else None)
+    render(data, Path(args.png), Path(args.svg), asm_reference)
     return 0
 
 

@@ -29,7 +29,7 @@ def extrapolate_storage(points: list[dict[str, float]], target: int = 1_000_000)
 
 
 def render_plots(points: list[dict[str, float]], projection: dict[str, Any],
-                 png: Path, svg: Path) -> None:
+                 png: Path, svg: Path, asm_reference: dict[str, Any] | None = None) -> None:
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -75,6 +75,15 @@ def render_plots(points: list[dict[str, float]], projection: dict[str, Any],
         ram_axis.annotate(f'n={item.get("repetitions", 1)}',
                           (item["events"], item["stack_ram_peak_bytes"] / 1e9),
                           xytext=(0, 10), textcoords="offset points", ha="center", fontsize=8)
+    if asm_reference is not None:
+        asm_peak_gb = asm_reference["resources"]["bridge_rss_peak_bytes"] / 1e9
+        ram_axis.axhline(asm_peak_gb, color="#55d6be", linestyle="--", linewidth=2,
+                        label="ASM-CM + Bridge 8.1 peak RSS reference")
+        ram_axis.annotate(
+            f"{asm_peak_gb:.3f} GB — operational reference, not TG-2 scaling",
+            (events[-1], asm_peak_gb), xytext=(-4, 8), textcoords="offset points",
+            ha="right", color="#55d6be", fontsize=8,
+        )
     ram_axis.set_ylabel("Peak container RAM (GB)")
     ram_axis.set_title("TrustGraph stack RAM — measured peak (not 30 s mean)")
     ram_axis.legend(fontsize=8)
@@ -104,10 +113,13 @@ def main() -> int:
     parser.add_argument("--svg", required=True)
     parser.add_argument("--png", required=True)
     parser.add_argument("--output", required=True)
+    parser.add_argument("--asm-reference")
     args = parser.parse_args()
     points = json.loads(Path(args.points).read_text(encoding="utf-8"))
     projection = extrapolate_storage(points)
-    render_plots(points, projection, Path(args.png), Path(args.svg))
+    asm_reference = (json.loads(Path(args.asm_reference).read_text(encoding="utf-8"))
+                     if args.asm_reference else None)
+    render_plots(points, projection, Path(args.png), Path(args.svg), asm_reference)
     write_json(Path(args.output), projection)
     return 0
 

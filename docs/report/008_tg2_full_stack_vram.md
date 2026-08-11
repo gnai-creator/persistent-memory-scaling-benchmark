@@ -26,10 +26,11 @@ Picos observados:
 
 ![RAM e VRAM da stack TrustGraph](../screens/tg2-vram-stack-comparison.png)
 
-O gráfico público mostra exclusivamente recursos da stack TrustGraph: RAM dos
-containers e VRAM atribuída aos seus processos. VRAM do ASM, desktop, driver e
-outros processos permanece nos dados de auditoria, mas foi excluída da figura
-para não ser confundida com custo do framework.
+As barras do gráfico público mostram exclusivamente recursos da stack TrustGraph:
+RAM dos containers e VRAM atribuída aos seus processos. O diamante acrescenta o
+ponto operacional separado **ASM-CM + Bridge 8.1**: 0,115 GB de peak RSS e 0 B de
+VRAM atribuída. Ele não é uma média idle de 30 s nem uma série TG-2. O reader
+Qwen3 14B permanece excluído e reportado em sua própria camada.
 
 ### Duas estatísticas de RAM, sem contradição
 
@@ -37,6 +38,8 @@ Este gráfico usa **RAM média dos containers durante uma janela idle de 30 s**:
 4,27 GB no c100k. O painel de scaling usa outra estatística, **pico de RAM dos
 containers durante a janela carregada**: 4,81 GB no c100k. Média e pico não devem
 ser intercambiados; ambos permanecem identificados com duração, fase e unidade.
+O diamante ASM também usa pico, explicitamente rotulado, e serve apenas como
+referência operacional Phase 8.1.
 
 ## Interpretação
 
@@ -71,3 +74,5 @@ aproximadamente 4,27 GB de RAM de containers.
   correspondente na amostra.
 - O resultado de 0 B vale para o caminho estruturado e a configuração testada;
   não é uma afirmação universal sobre todos os fluxos do TrustGraph.
+- O ponto ASM-CM + Bridge 8.1 não substitui a curva ASM-TG-2 pareada ainda
+  pendente.

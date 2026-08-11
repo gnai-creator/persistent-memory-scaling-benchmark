@@ -24,11 +24,16 @@ reexecução discordante da mesma estatística.
 
 ## Comparação ASM-CM
 
-ASM-CM não foi adicionado às curvas TG-2 atuais porque ainda não executou o mesmo
+ASM-CM ainda não foi adicionado como **curva TG-2**, porque não executou o mesmo
 workload nos checkpoints c100, c1k, c10k e c100k sob o mesmo coletor. Os resultados
-Phase 7.6/8.1 usam MultiWOZ e medem retrieval, reader e tokens; inseri-los nas
-curvas de armazenamento, RAM, ingestão ou consulta TG-2 seria uma comparação de
+Phase 7.6/8.1 usam MultiWOZ e medem retrieval, reader e tokens; apresentá-los como
+série de armazenamento, ingestão ou consulta TG-2 seria uma comparação de
 protocolos diferentes.
+
+Após a conclusão da Phase 8.1, o painel de RAM passou a incluir uma linha horizontal
+tracejada de **0,115 GB peak RSS** como referência operacional separada
+“ASM-CM + Bridge 8.1”. A própria anotação declara “not TG-2 scaling”; o ponto não é
+usado para ajustar tendência, extrapolação ou intervalo de confiança.
 
 A série ASM-CM será adicionada quando o gate ASM-TG-2 produzir, por checkpoint:
 
