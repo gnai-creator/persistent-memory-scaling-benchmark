@@ -24,8 +24,9 @@ comparison.
 
 ![Completed ASM LongMemEval-S evaluation](../screens/asm-longmemeval-s-500-complete.png)
 
-This chart now includes all seven completed 500-question systems under the same
-top-15 budget, Bridge 8.1 compactor, GPT-4o reader and official GPT-4o judge. The
+This chart includes seven compact systems plus one completed high-context TrustGraph
+ablation. The seven internal systems share the top-15 budget, Bridge 8.1 compactor,
+GPT-4o reader and official GPT-4o judge. The
 ASM baseline is reused by hash; the RRF combinations are deterministic, equal-weight
 and gold-blind.
 
@@ -38,19 +39,26 @@ and gold-blind.
 | ASM + BM25 RRF | 95.03% | 29.80% | 1,789.4 | 1.72 s |
 | Vector + BM25 RRF | **98.53%** | **55.60%** | 1,789.4 | 1.90 s |
 | ASM + Vector + BM25 RRF | 97.02% | 50.20% | 1,790.5 | 1.94 s |
-| TrustGraph graph-embeddings | 96.48% | **70.00%** | 27,928.1 | 5.30 s |
+| TrustGraph graph-embeddings (uncompacted) | 96.48% | **70.00%** | 27,928.1 | 5.30 s |
 
 On this external-generalization protocol, the pure ASM-CM path did not outperform
 the lexical or vector controls. Vector + BM25 RRF produced the best measured Recall@15
 and official accuracy. Adding ASM to RRF improved substantially over ASM alone but did
 not improve the strongest Vector + BM25 combination.
 
-The completed paired TrustGraph graph-embeddings path achieved the highest official
-accuracy, despite lower Recall@15 than Vector + BM25 RRF. It sent approximately 15.6x
+The completed uncompacted TrustGraph graph-embeddings path achieved the highest official
+accuracy, despite lower Recall@15 than Vector + BM25 RRF. An audit found that the runner
+had omitted the Bridge 8.1 evidence transform, so this result is a valid high-context
+ablation rather than a same-compactor result. It sent approximately 15.6x
 as many input tokens per question as the compact internal systems and its GPT-4o reader
 latency was approximately 2.8x the Vector + BM25 RRF reader latency. TrustGraph retrieval
 itself averaged 100.9 ms/question; the table keeps retrieval and reader latency separate.
 This result is graph-embeddings retrieval, not Full GraphRAG.
+
+A corrected compact TrustGraph rerun and a five-system fixed-context ablation at 2k,
+4k, 8k, 16k and 28k evidence tokens are in progress. The fixed-context run uses frozen,
+gold-blind rankings and the same GPT-4o reader to isolate accuracy purchased per unit of
+reader context.
 
 ### Consumption versus accuracy
 

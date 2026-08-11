@@ -78,7 +78,7 @@
         },
         {
           "id": "trustgraph_graph_embeddings_gpt4o",
-          "path": "results/raw/tg-longmemeval-s-500-graph-embeddings-gpt4o.json",
+          "path": "results/raw/tg-longmemeval-s-500-graph-embeddings-bridge81-gpt4o.json",
           "kind": "trustgraph_rows",
           "required": true
         },

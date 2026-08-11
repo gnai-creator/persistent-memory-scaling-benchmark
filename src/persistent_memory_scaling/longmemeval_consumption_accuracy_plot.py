@@ -28,7 +28,7 @@ LABELS = {
     "asm_bm25_rrf_bridge81_gpt4o": "ASM + BM25 RRF",
     "vector_bm25_rrf_bridge81_gpt4o": "Vector + BM25 RRF",
     "asm_vector_bm25_rrf_bridge81_gpt4o": "ASM + Vector + BM25 RRF",
-    "trustgraph_graph_embeddings_gpt4o": "TrustGraph graph-embeddings",
+    "trustgraph_graph_embeddings_gpt4o": "TrustGraph graph-embeddings\n(uncompacted)",
 }
 COLORS = ["#55d6be", "#2dd4bf", "#f6c85f", "#7aa2f7", "#bb9af7", "#ff7a90", "#ff9e64", "#f7768e"]
 ANNOTATION_OFFSETS = {
@@ -67,7 +67,7 @@ def render(data: dict[str, dict[str, float]], png: Path, svg: Path) -> None:
     figure, axes = plt.subplots(1, 3, figsize=(21, 7.5), constrained_layout=True)
     figure.suptitle(
         "LongMemEval-S — official accuracy versus reader-context consumption\n"
-        "Same 500 questions, top-15 budget, Bridge 8.1 compactor and GPT-4o judge",
+        "Same 500 questions and GPT-4o judge; TrustGraph point is uncompacted",
         fontsize=16, weight="bold",
     )
 

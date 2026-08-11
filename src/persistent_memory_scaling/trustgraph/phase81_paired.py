@@ -90,7 +90,7 @@ def main() -> int:
         parser.error(f"TrustGraph token required via --token or {args.token_env}")
 
     sys.path[:0] = [str(args.asm_root), str(args.asm_root / "src")]
-    from asm_memory_bridge import RetrievalCandidate
+    from asm_memory_bridge import ExtractiveCompactor, RetrievalCandidate
     from benchmarks.multiwoz.phase8 import evaluate_one, metric_summary
     from benchmarks.multiwoz.phase81 import reader_from_protocol
     from persistent_memory_scaling.trustgraph.client import TrustGraphClient
@@ -205,6 +205,17 @@ def main() -> int:
         "reader_api_key_env": "",
     })()
     reader = reader_from_protocol(reader_args, reader_protocol)
+    compactor = None
+    compactor_config = reader_protocol.get("compactor")
+    if compactor_config:
+        if compactor_config.get("answer_or_gold_visible_to_compactor") is not False:
+            raise ValueError("paired compactor must be explicitly gold-blind")
+        compactor = ExtractiveCompactor(
+            max_total_bytes=int(compactor_config["max_total_bytes"]),
+            max_bytes_per_memory=int(compactor_config["max_bytes_per_memory"]),
+            max_anchors_per_memory=int(compactor_config["max_anchors_per_memory"]),
+            window_radius=int(compactor_config["window_radius"]),
+        )
     top_k = int(reader_protocol["top_k"])
     for index, instance in enumerate(instances, 1):
         if instance.question_id in completed:
@@ -226,6 +237,7 @@ def main() -> int:
             retrieval_latency_ms=retrieval_ms,
             input_price_per_million=float(reader_protocol.get("input_price_per_million", 0.0)),
             output_price_per_million=float(reader_protocol.get("output_price_per_million", 0.0)),
+            evidence_transform=compactor,
         )
         rows.append(row)
         partial = {
@@ -270,6 +282,7 @@ def main() -> int:
             "MultiWOZ memories were imported as entity contexts to preserve one retrievable ID per dialogue.",
             "Each question searches only its frozen 16-memory Phase 8.1 bundle, matching the ASM, Vector RAG, and BM25 candidate corpus.",
             "Collection setup, ingestion submission, and indexing readiness are excluded from query latency.",
+            "The frozen Bridge 8.1 compactor is applied when present in the paired reader protocol.",
         ],
     }
     write_json(args.output, result)

@@ -145,12 +145,12 @@ def render_longmemeval(
         "asm_bm25_rrf_bridge81_gpt4o": "ASM + BM25 RRF",
         "vector_bm25_rrf_bridge81_gpt4o": "Vector + BM25 RRF",
         "asm_vector_bm25_rrf_bridge81_gpt4o": "ASM + Vector + BM25 RRF",
-        "trustgraph_graph_embeddings_gpt4o": "TrustGraph graph-embeddings",
+        "trustgraph_graph_embeddings_gpt4o": "TrustGraph graph-embeddings\n(uncompacted)",
     }
     figure, axes = plt.subplots(2, 2, figsize=(17, 11), constrained_layout=True)
     figure.suptitle(
         "LongMemEval-S paired comparison — complete 500/500 with GPT-4o\n"
-        "TrustGraph uses graph-embeddings retrieval, not Full GraphRAG",
+        "TrustGraph uses graph-embeddings retrieval and is uncompacted, not Full GraphRAG",
         fontsize=15, weight="bold",
     )
     panels = [

@@ -13,6 +13,7 @@ dependencies = []
 trustgraph = ["trustgraph-base>=2.8,<2.9", "aiohttp>=3.10,<4"]
 test = ["pytest>=8,<9"]
 plot = ["matplotlib>=3.10,<4"]
+fixed-context = ["tiktoken>=0.9,<1"]
 
 [project.scripts]
 pmsb-tg0 = "persistent_memory_scaling.trustgraph.cli:main"
@@ -21,6 +22,7 @@ pmsb-tg1-run = "persistent_memory_scaling.trustgraph.tg1_runner:main"
 pmsb-tg2-run = "persistent_memory_scaling.trustgraph.tg2_runner:main"
 pmsb-asm-tg2-run = "persistent_memory_scaling.asm_tg2_runner:main"
 pmsb-finalize-check = "persistent_memory_scaling.finalization:main"
+pmsb-longmemeval-fixed-context = "persistent_memory_scaling.longmemeval_fixed_context:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

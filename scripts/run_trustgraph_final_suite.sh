@@ -63,7 +63,7 @@ stage_output() {
     phase81_full) printf '%s\n' "$repo_root/results/raw/tg-phase81-full-graphrag-full-v2.json" ;;
     free128_graph_embeddings) printf '%s\n' "$repo_root/results/raw/tg-r32-free-language-graph-embeddings.json" ;;
     free128_full_graphrag) printf '%s\n' "$repo_root/results/raw/tg-r32-free-language-full-graphrag.json" ;;
-    longmemeval500_graph_embeddings) printf '%s\n' "$repo_root/results/raw/tg-longmemeval-s-500-graph-embeddings-gpt4o.json" ;;
+    longmemeval500_graph_embeddings) printf '%s\n' "$repo_root/results/raw/tg-longmemeval-s-500-graph-embeddings-bridge81-gpt4o.json" ;;
     longmemeval500_full_graphrag) printf '%s\n' "$repo_root/results/raw/tg-longmemeval-s-500-full-graphrag-gpt4o.json" ;;
     *) return 2 ;;
   esac

@@ -440,8 +440,12 @@ retriever on LongMemEval-S. The chart excludes the shared 26.55-second ranking/c
 precomputation value from per-system latency comparison; it shows independently recorded
 GPT-4o reader latency instead.
 
-The completed TrustGraph graph-embeddings path reached 96.48% Recall@15 and **70.00%
-official accuracy**, the best answer-quality result in this paired LongMemEval-S table.
+The completed **uncompacted** TrustGraph graph-embeddings ablation reached 96.48%
+Recall@15 and **70.00% official accuracy**, the best answer-quality result currently
+shown in this LongMemEval-S table. An implementation audit found that this run did not
+apply the Bridge 8.1 compactor, despite the earlier report describing it as paired.
+It is therefore preserved as a valid high-context ablation, not presented as a
+same-compactor comparison. A corrected compact rerun is in progress.
 That gain came with 27,928 input tokens per question—about 15.6x the compact internal
 systems—and 5.30 seconds of GPT-4o reader latency, versus 1.90 seconds for Vector + BM25
 RRF. TrustGraph retrieval itself averaged 100.9 ms/question. This is a real counterweight
@@ -456,6 +460,12 @@ TrustGraph gained 14.4 official-accuracy points while adding 26,138.7 reader inp
 per question. Its context efficiency was 2.5 accuracy points per 1,000 input tokens,
 versus 31.1 for Vector + BM25 RRF. “Consumption” in this figure means measured reader
 input tokens only; it does not substitute unmeasured paired RAM or VRAM values.
+
+To test whether the quality gain comes from ranking quality or simply from exposing much
+more evidence to GPT-4o, a gold-blind fixed-context control is now running at 2k, 4k, 8k,
+16k and 28k evidence tokens for ASM-CM, Vector, BM25, Vector+BM25 RRF and TrustGraph. It
+reuses frozen top-15 rankings, the same 500 questions and the same reader, and records
+both the enforced evidence budget and provider-reported total input tokens.
 
 ## DocumentRAG controls
 

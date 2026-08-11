@@ -18,5 +18,5 @@ exec .venv/bin/python -m persistent_memory_scaling.trustgraph.phase81_paired \
   --official-evaluator-root /home/felipe/dev/ai/gitlab/LongMemEval \
   --official-python /home/felipe/dev/ai/gitlab/LongMemEval/.venv/bin/python \
   --phase8-results /home/felipe/dev/ai/gitlab/asm-memory-bridge/runs/asm_bridge81_longmemeval_gpt4o/results.json \
-  --output "$repo_root/results/raw/tg-longmemeval-s-500-graph-embeddings-gpt4o.json" \
+  --output "$repo_root/results/raw/tg-longmemeval-s-500-graph-embeddings-bridge81-gpt4o.json" \
   --resume

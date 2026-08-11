@@ -319,6 +319,8 @@ Bridge. O adaptador ASM-CM futuro deverá implementar o contrato já congelado.
 - [ ] implementar adaptador ASM-CM para o schema comum;
 - [ ] usar os mesmos eventos, perguntas, splits e ground truth;
 - [ ] usar o mesmo reader e orçamento de evidência;
+- [ ] concluir o controle LongMemEval-S de orçamento fixo em 2k, 4k, 8k, 16k e
+  28k tokens para separar qualidade do ranking de volume de contexto;
 - [ ] comparar retrieval antes de comparar respostas;
 - [ ] medir estado/persistência, RAM, VRAM, latência e tokens;
 - [ ] separar payload store de estado associativo ASM-CM;
