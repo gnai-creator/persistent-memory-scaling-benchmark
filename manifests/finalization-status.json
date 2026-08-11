@@ -28,7 +28,7 @@
         },
         {
           "artifact_id": "trustgraph_full_graphrag",
-          "path": "results/raw/tg-phase81-full-graphrag-full.json",
+          "path": "results/raw/tg-phase81-full-graphrag-full-v2.json",
           "status": "incomplete",
           "detail": "10/979 questions"
         }
@@ -75,14 +75,14 @@
         {
           "artifact_id": "asm_hybrids_gpt4o",
           "path": "../asm-memory-bridge/runs/asm_bridge81_longmemeval_hybrids/results.json",
-          "status": "running",
-          "detail": "vector_bridge81_gpt4o=377/500, bm25_bridge81_gpt4o=377/500, asm_vector_rrf_bridge81_gpt4o=377/500, asm_bm25_rrf_bridge81_gpt4o=377/500, vector_bm25_rrf_bridge81_gpt4o=377/500, asm_vector_bm25_rrf_bridge81_gpt4o=377/500"
+          "status": "ready",
+          "detail": "6 systems \u00d7 500 rows"
         },
         {
           "artifact_id": "trustgraph_graph_embeddings_gpt4o",
           "path": "results/raw/tg-longmemeval-s-500-graph-embeddings-gpt4o.json",
-          "status": "missing",
-          "detail": "file does not exist"
+          "status": "ready",
+          "detail": "500/500 questions"
         },
         {
           "artifact_id": "trustgraph_full_graphrag_gpt4o",

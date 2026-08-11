@@ -32,6 +32,6 @@ Protocol status: **NOT READY**
 | Artifact | Status | Evidence |
 |---|---:|---|
 | `asm_bridge81_gpt4o` | ready | complete=True; examples=500/500 |
-| `asm_hybrids_gpt4o` | running | vector_bridge81_gpt4o=377/500, bm25_bridge81_gpt4o=377/500, asm_vector_rrf_bridge81_gpt4o=377/500, asm_bm25_rrf_bridge81_gpt4o=377/500, vector_bm25_rrf_bridge81_gpt4o=377/500, asm_vector_bm25_rrf_bridge81_gpt4o=377/500 |
-| `trustgraph_graph_embeddings_gpt4o` | missing | file does not exist |
+| `asm_hybrids_gpt4o` | ready | 6 systems × 500 rows |
+| `trustgraph_graph_embeddings_gpt4o` | ready | 500/500 questions |
 | `trustgraph_full_graphrag_gpt4o` | missing | file does not exist |

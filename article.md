@@ -423,6 +423,40 @@ generation are integration diagnostics. The corrected bounded run starts a new
 homogeneous `v2` artifact at 0/979; reusing the old rows would mix materially different
 runtime configurations.
 
+## LongMemEval-S external generalization
+
+The completed internal candidate-generator comparison used the same 500 LongMemEval-S
+questions, top-15 budget, Bridge 8.1 compactor, GPT-4o reader and official GPT-4o judge
+for seven systems. This result does not favor ASM-CM: the pure ASM path reached 42.33%
+Recall@15 and 14.20% official accuracy, while Vector + BM25 RRF reached 98.53% and
+55.60%, respectively. Adding ASM to Vector + BM25 RRF produced 97.02% Recall@15 and
+50.20% accuracy, below the two-component control.
+
+![Completed LongMemEval-S candidate comparison](docs/screens/asm-longmemeval-s-500-complete.png)
+
+This is an important boundary on the MultiWOZ result. ASM-CM performed strongly on its
+structured Phase 8.1 protocol but did not generalize competitively as a standalone
+retriever on LongMemEval-S. The chart excludes the shared 26.55-second ranking/cache
+precomputation value from per-system latency comparison; it shows independently recorded
+GPT-4o reader latency instead.
+
+The completed TrustGraph graph-embeddings path reached 96.48% Recall@15 and **70.00%
+official accuracy**, the best answer-quality result in this paired LongMemEval-S table.
+That gain came with 27,928 input tokens per question—about 15.6x the compact internal
+systems—and 5.30 seconds of GPT-4o reader latency, versus 1.90 seconds for Vector + BM25
+RRF. TrustGraph retrieval itself averaged 100.9 ms/question. This is a real counterweight
+to the MultiWOZ result: on LongMemEval-S, TrustGraph produced substantially better judged
+answers, but with dramatically larger reader context and higher reader latency. It is
+graph-embeddings retrieval, not Full GraphRAG.
+
+![LongMemEval-S accuracy versus context consumption](docs/screens/longmemeval-consumption-vs-accuracy.png)
+
+The delta view makes the price of that quality gain explicit. Against Vector + BM25 RRF,
+TrustGraph gained 14.4 official-accuracy points while adding 26,138.7 reader input tokens
+per question. Its context efficiency was 2.5 accuracy points per 1,000 input tokens,
+versus 31.1 for Vector + BM25 RRF. “Consumption” in this figure means measured reader
+input tokens only; it does not substitute unmeasured paired RAM or VRAM values.
+
 ## DocumentRAG controls
 
 The implementation plan requires independent DocumentRAG vector, keyword/BM25, and
