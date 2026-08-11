@@ -29,13 +29,32 @@ uses a separate output path.
 
 ## Frozen comparison matrix
 
-The control evaluates five candidate generators:
+The control is executed in two resumable stages. The first stage evaluates five
+candidate generators:
 
 1. ASM-CM + Memory Bridge 8.1;
 2. Vector + Memory Bridge 8.1;
 3. BM25 + Memory Bridge 8.1;
 4. Vector + BM25 equal-weight RRF + Memory Bridge 8.1;
 5. TrustGraph graph-embeddings.
+
+After that matrix completes, the checkpoint is expanded with three ASM hybrid rankings:
+
+6. ASM + Vector equal-weight RRF + Memory Bridge 8.1;
+7. ASM + BM25 equal-weight RRF + Memory Bridge 8.1;
+8. ASM + Vector + BM25 equal-weight RRF + Memory Bridge 8.1.
+
+The hybrids are required because all three outperformed standalone ASM-CM on the
+completed compact LongMemEval-S evaluation. They remain scientifically relevant even
+though none exceeded the strongest Vector + BM25 control at that earlier point.
+
+Two non-retrieval controls are added in the same second stage:
+
+9. canonical full-history order, truncated only by the fixed token budget;
+10. deterministic random history order, truncated by the same budget.
+
+These controls test whether a retrieval ranking adds measurable value over directly
+transporting history or selecting history without relevance information.
 
 For every system, the top-15 memory IDs are reused from completed artifacts. Retrieval
 is not rerun, and neither the answer nor the gold memory IDs are visible to ranking or
@@ -101,10 +120,12 @@ with additional reader context. Either outcome is publishable.
 
 ## Completeness rules
 
-There are 25 configurations and 500 questions, for 12,500 reader answers. Partial rows
-are checkpoints only. No budget-level accuracy claim is promoted until all 12,500 rows
-and the official evaluation are complete. The runner is resumable and rejects a resume
-whose protocol differs from the frozen configuration.
+The first stage contains 25 configurations and 12,500 reader answers. The expanded final
+matrix contains 50 configurations and 25,000 reader answers. Partial rows are checkpoints
+only. The first-stage result may be analyzed after its official evaluation completes,
+but the final ten-system chart is not promoted until all 25,000 rows and the expanded
+official evaluation are complete. The runner is resumable, accepts only an additive
+system expansion, and rejects changes to questions, budgets or other frozen fields.
 
 ## Reproduction
 
@@ -128,4 +149,16 @@ Canonical implementation and artifacts:
   `results/raw/tg-longmemeval-s-500-graph-embeddings-gpt4o.json`.
 
 The source TrustGraph answer artifact is uncompacted, but only its frozen retrieved IDs
-are reused. All five systems receive newly assembled evidence under the same budget rule.
+are reused. All systems receive newly assembled evidence under the same budget rule.
+
+## Completed pre-control accounting
+
+Before the budget-matched reader rerun, an offline symmetric accounting pass compares
+all completed systems. It reports exact `evidence_bytes / complete_history_bytes`,
+provider input tokens, official accuracy, accuracy points per 1,000 input tokens and
+input tokens per accuracy point. This calculation requires no new LLM calls and is stored
+in `results/raw/longmemeval-all-context-efficiency.json`.
+
+The provider-input/history-token ratio is reported separately from the evidence-byte
+fraction because provider input includes the question, system prompt, provenance fields
+and formatting. It must not be mislabeled as an evidence-only percentage.

@@ -8,7 +8,10 @@ ASM_ROOT = Path("/home/felipe/dev/ai/gitlab/asm-memory-bridge")
 sys.path[:0] = [str(ASM_ROOT), str(ASM_ROOT / "src")]
 
 from asm_memory_bridge import Evidence, EvidencePackage, MemoryQuery
-from persistent_memory_scaling.longmemeval_fixed_context import TokenBudgetCompactor
+from persistent_memory_scaling.longmemeval_fixed_context import (
+    TokenBudgetCompactor,
+    _resume_protocol_is_compatible,
+)
 
 
 def test_token_budget_compactor_never_exceeds_budget() -> None:
@@ -30,3 +33,11 @@ def test_token_budget_compactor_never_exceeds_budget() -> None:
     assert compactor.last_used_tokens <= 200
     assert compacted.evidence
     assert compacted.context_bytes > 0
+
+
+def test_resume_accepts_only_additional_systems() -> None:
+    previous = {"budgets": [2000], "systems": ["asm", "vector"]}
+    expanded = {"budgets": [2000], "systems": ["asm", "vector", "hybrid"]}
+    changed = {"budgets": [4000], "systems": ["asm", "vector", "hybrid"]}
+    assert _resume_protocol_is_compatible(previous, expanded)
+    assert not _resume_protocol_is_compatible(previous, changed)

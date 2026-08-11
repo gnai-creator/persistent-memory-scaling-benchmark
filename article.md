@@ -463,9 +463,30 @@ input tokens only; it does not substitute unmeasured paired RAM or VRAM values.
 
 To test whether the quality gain comes from ranking quality or simply from exposing much
 more evidence to GPT-4o, a gold-blind fixed-context control is now running at 2k, 4k, 8k,
-16k and 28k evidence tokens for ASM-CM, Vector, BM25, Vector+BM25 RRF and TrustGraph. It
+16k and 28k evidence tokens for ASM-CM, its three RRF hybrids, Vector, BM25,
+Vector+BM25 RRF and TrustGraph. It
 reuses frozen top-15 rankings, the same 500 questions and the same reader, and records
 both the enforced evidence budget and provider-reported total input tokens.
+
+An offline coverage audit adds an important correction: the uncompacted TrustGraph run
+did not send the entire LongMemEval history. It selected approximately 26.0% of available
+history tokens and 23.9% of memories on average—26,993 selected content tokens from a
+mean 103,936-token history. The matched canonical-history and deterministic-random
+controls will test whether that selection itself added value.
+
+![TrustGraph LongMemEval context coverage](docs/screens/tg-longmemeval-context-coverage.png)
+
+Applying the same accounting to every completed system makes the cost/quality trade-off
+explicit. The seven compact paths delivered approximately 1.24–1.27% of available
+history tokens, while uncompacted TrustGraph delivered 25.97%. Against Vector + BM25 RRF,
+TrustGraph improved official accuracy from 55.60% to 70.00%, but used 27,928 instead of
+1,789 reader input tokens per question. That is a 14.4-point gain for approximately
+15.6x the reader context and about 20.5x the history-token fraction. Measured accuracy
+per 1,000 reader tokens was 2.5 points for TrustGraph versus 31.1 for Vector + BM25 RRF.
+Mean reader latency was 5.30 seconds for TrustGraph versus 1.90 seconds for the compact
+Vector + BM25 RRF path.
+
+![LongMemEval history consumption and accuracy](docs/screens/longmemeval-all-context-efficiency.png)
 
 ## DocumentRAG controls
 

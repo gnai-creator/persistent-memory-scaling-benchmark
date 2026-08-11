@@ -627,8 +627,9 @@ The frozen accounting specification is documented in
 [methodology/asm_cm_disk_vs_working_memory.md](methodology/asm_cm_disk_vs_working_memory.md).
 
 The LongMemEval-S accuracy-versus-context control freezes top-15 rankings and evaluates
-ASM-CM, Vector, BM25, Vector+BM25 RRF and TrustGraph at 2k, 4k, 8k, 16k and 28k evidence
-tokens with the same GPT-4o reader. Its protocol, audit correction and interpretation
+ASM-CM, its three RRF hybrids, Vector, BM25, Vector+BM25 RRF, TrustGraph and two
+non-retrieval controls at 2k, 4k, 8k, 16k and 28k evidence tokens with the same GPT-4o
+reader. Its protocol, audit correction and interpretation
 rules are documented in
 [methodology/longmemeval_fixed_context_budget.md](methodology/longmemeval_fixed_context_budget.md).
 
