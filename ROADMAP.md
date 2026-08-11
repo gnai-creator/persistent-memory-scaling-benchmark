@@ -158,6 +158,12 @@ A hipótese e a contabilidade completas estão em
 - [ ] executar três repetições válidas por checkpoint oficial;
 - [ ] gerar curvas de armazenamento, escrita e consulta estruturada.
 
+Progresso oficial:
+
+- [x] três repetições pareadas em `100` eventos;
+- [x] três repetições pareadas em `1k` eventos;
+- [ ] três repetições pareadas em `10k`, `100k` e `1M`;
+
 ### Gate
 
 - zero fatos ausentes, extras ou atribuídos ao namespace errado;

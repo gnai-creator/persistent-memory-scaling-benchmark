@@ -15,6 +15,7 @@ from persistent_memory_scaling.trustgraph.tg2 import (
     workload_fingerprint,
     export_cassandra_collection,
 )
+from persistent_memory_scaling.trustgraph.tg2_runner import aggregate_tg2_cycles
 
 
 def triples(events):
@@ -102,3 +103,10 @@ def test_negative_event_index_is_rejected():
 def test_cassandra_export_rejects_unsafe_collection():
     with pytest.raises(ValueError, match="unsafe"):
         list(export_cassandra_collection("collection'; DROP TABLE x;--"))
+
+
+def test_tg2_aggregate_rejects_mixed_checkpoints():
+    values = [{"valid": True, "checkpoint_events": count,
+               "workload": {"sha256": "a"}} for count in (100, 1000)]
+    with pytest.raises(ValueError, match="share checkpoint"):
+        aggregate_tg2_cycles(values)

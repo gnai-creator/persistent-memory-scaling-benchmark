@@ -1,0 +1,44 @@
+{
+  "schema_version": "tg2-official-checkpoints-v1",
+  "date": "2026-08-11",
+  "status": "partial-pass",
+  "protocol": {
+    "repetitions": 3,
+    "stabilization_seconds": 60,
+    "quiescence_observation_seconds": 15,
+    "empty_control_seconds": 30,
+    "loaded_window_seconds": 30,
+    "confidence_method": "two-sided Student t approximation"
+  },
+  "checkpoints": [
+    {
+      "events": 100,
+      "run_ids": ["tg2-official-c100-r1", "tg2-official-c100-r2", "tg2-official-c100-r3"],
+      "workload_sha256": "915b6025b5a1ec1859755aea830f64db84385f10076458438e4f32f393009079",
+      "disk_mean_bytes": 2140842.6666666665,
+      "disk_ci95": [2064467.285333333, 2217218.048],
+      "ram_mean_bytes": 35429985.0,
+      "ram_ci95": [-66717333.08448903, 137577303.08448905],
+      "audit_unique_triples_each_run": 656,
+      "missing": 0,
+      "unexpected": 0
+    },
+    {
+      "events": 1000,
+      "run_ids": ["tg2-official-c1k-r1", "tg2-official-c1k-r2", "tg2-official-c1k-r3"],
+      "workload_sha256": "cd0e91c926159aba1dd38cb0cbe7f8ffc9b7e7a2668636640ddd0ab146be97f5",
+      "disk_mean_bytes": 19615744.0,
+      "disk_ci95": [19605568.15069871, 19625919.84930129],
+      "ram_mean_bytes": 82707477.33333333,
+      "ram_ci95": [56484355.01925801, 108930599.64740865],
+      "audit_unique_triples_each_run": 6563,
+      "missing": 0,
+      "unexpected": 0
+    }
+  ],
+  "trustgraph_vram_peak_bytes": 0,
+  "llm_input_tokens": 0,
+  "llm_token_note": "not applicable: TG-2 performs no reader/LLM call",
+  "remaining_checkpoints": [10000, 100000, 1000000],
+  "report": "docs/report/006_tg2_official_100_1k.md"
+}

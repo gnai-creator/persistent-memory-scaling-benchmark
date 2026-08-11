@@ -12,6 +12,7 @@ from .metrics import (aggregate_deltas, aggregate_official_cycles, delta, sample
 from .preflight import write_json
 from .client import TrustGraphClient
 from .workload import BASE, generate_smoke_workload
+from .tg2_runner import aggregate_tg2_cycles
 
 
 def main() -> int:
@@ -42,6 +43,9 @@ def main() -> int:
     official = commands.add_parser("official-aggregate")
     official.add_argument("inputs", nargs="+")
     official.add_argument("--output", required=True)
+    tg2_aggregate = commands.add_parser("tg2-aggregate")
+    tg2_aggregate.add_argument("inputs", nargs="+")
+    tg2_aggregate.add_argument("--output", required=True)
     workload = commands.add_parser("workload")
     workload.add_argument("--mode", required=True, choices=["ingest", "query"])
     workload.add_argument("--token", required=True)
@@ -73,6 +77,15 @@ def main() -> int:
                            for item in inputs]
                    for phase in ("empty-control", "loaded", "cold", "warm")}
         value = aggregate_official_cycles(inputs, windows)
+        write_json(Path(args.output), value)
+    elif args.command == "tg2-aggregate":
+        inputs = [json.loads(Path(path).read_text(encoding="utf-8")) for path in args.inputs]
+        base = Path(args.inputs[0]).parent
+        for item in inputs:
+            item["_loaded_window"] = json.loads(
+                (base / f"{item['run_id']}-loaded-window.json").read_text(encoding="utf-8")
+            )
+        value = aggregate_tg2_cycles(inputs)
         write_json(Path(args.output), value)
     else:
         client = TrustGraphClient("http://localhost:8888/", args.token, flow_id=args.flow_id,
