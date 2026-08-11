@@ -110,3 +110,19 @@ automática:
 O runner executa `down --volumes` somente no projeto Compose `generated` no
 início e `down` sem remover volumes ao final. Ele não controla processos do host
 nem o ASM.
+
+## Checkpoint TG-2
+
+O runner estruturado gera o workload antes da medição, importa em chunks com
+journal retomável, audita integralmente a collection e executa 100 consultas:
+
+```bash
+.venv/bin/python -m persistent_memory_scaling.trustgraph.tg2_runner \
+  --token "$IAM_BOOTSTRAP_TOKEN" --run-id tg2-c1k-r1 \
+  --events 1000 --chunk-size 250 --stabilization 60
+```
+
+Para continuar exatamente o mesmo run sobre volumes preservados, repita os
+mesmos IDs, contagens e chunk size e acrescente `--resume`. O journal recusa um
+hash de workload diferente. Runs de retomada validam idempotência, mas não são
+usados como medições fresh da curva oficial.

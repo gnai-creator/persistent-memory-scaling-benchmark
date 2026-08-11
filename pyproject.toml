@@ -17,6 +17,7 @@ test = ["pytest>=8,<9"]
 pmsb-tg0 = "persistent_memory_scaling.trustgraph.cli:main"
 pmsb-tg1 = "persistent_memory_scaling.trustgraph.metrics_cli:main"
 pmsb-tg1-run = "persistent_memory_scaling.trustgraph.tg1_runner:main"
+pmsb-tg2-run = "persistent_memory_scaling.trustgraph.tg2_runner:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

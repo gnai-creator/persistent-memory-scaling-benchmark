@@ -4,6 +4,7 @@ __pycache__/
 .venv/
 *.egg-info/
 results/raw/
+results/journals/
 configs/trustgraph/generated/deploy.zip
 configs/trustgraph/generated/.gitkeep
 INSTALLATION.md

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aletheion.ai/schemas/pmsb/tg2-journal-v1.json",
+  "title": "PMSB TG-2 resumable ingestion journal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "workload_sha256", "event_count", "chunk_size", "completed_chunks"],
+  "properties": {
+    "schema_version": {"const": "tg2-journal-v1"},
+    "workload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "event_count": {"type": "integer", "minimum": 1},
+    "chunk_size": {"type": "integer", "minimum": 1},
+    "completed_chunks": {"type": "array", "items": {"type": "integer", "minimum": 0}, "uniqueItems": true}
+  }
+}

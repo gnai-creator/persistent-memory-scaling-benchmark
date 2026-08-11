@@ -61,6 +61,10 @@ class TrustGraphClient:
         )
 
     def import_events(self, events: Iterable[dict[str, Any]]) -> int:
+        return self.import_structured_events(events, document_id="pmsb-tg0", include_contexts=True)
+
+    def import_structured_events(self, events: Iterable[dict[str, Any]], document_id: str,
+                                 include_contexts: bool = False) -> int:
         _, Triple, _, _ = _sdk()
         event_list = list(events)
 
@@ -78,7 +82,7 @@ class TrustGraphClient:
         self.api.bulk().import_triples(
             flow=self.flow_id,
             triples=triples(),
-            metadata={"id": "pmsb-tg0", "metadata": [], "collection": self.collection},
+            metadata={"id": document_id, "metadata": [], "collection": self.collection},
         )
 
         def contexts():
@@ -86,12 +90,16 @@ class TrustGraphClient:
                 for item in event["entity_contexts"]:
                     yield {"entity": {"t": "i", "i": item["entity"]}, "context": item["context"]}
 
-        self.api.bulk().import_entity_contexts(
-            flow=self.flow_id,
-            contexts=contexts(),
-            metadata={"id": "pmsb-tg0", "metadata": [], "collection": self.collection},
-        )
+        if include_contexts:
+            self.api.bulk().import_entity_contexts(
+                flow=self.flow_id,
+                contexts=contexts(),
+                metadata={"id": document_id, "metadata": [], "collection": self.collection},
+            )
         return sum(len(event["triples"]) for event in event_list)
+
+    def export_triples(self) -> Iterable[Any]:
+        return self.api.bulk().export_triples(flow=self.flow_id)
 
     def query_subject(self, subject: str, limit: int = 20) -> list[Any]:
         _, _, Uri, _ = _sdk()

@@ -146,14 +146,14 @@ A hipótese e a contabilidade completas estão em
 
 ### Implementação
 
-- [ ] criar gerador determinístico com seed e schema congelados;
-- [ ] gerar fatos atômicos, temporais, relacionais e multi-hop;
-- [ ] incluir correções, conflitos, duplicatas e distratores;
-- [ ] incluir inglês e português brasileiro;
-- [ ] atribuir `event_id`, sequência, namespace e evidências relevantes;
-- [ ] importar grafo e proveniência sem extração por LLM;
-- [ ] auditar o conteúdo por export/consulta estruturada;
-- [ ] implementar journal retomável e ingestão idempotente;
+- [x] criar gerador determinístico com seed e schema congelados;
+- [x] gerar fatos atômicos, temporais, relacionais e multi-hop;
+- [x] incluir correções, conflitos, duplicatas e distratores;
+- [x] incluir inglês e português brasileiro;
+- [x] atribuir `event_id`, sequência, namespace e evidências relevantes;
+- [x] importar grafo e proveniência sem extração por LLM;
+- [x] auditar o conteúdo por export/consulta estruturada;
+- [x] implementar journal retomável e ingestão idempotente;
 - [ ] medir `100`, `1k`, `10k`, `100k` e `1M` eventos;
 - [ ] executar três repetições válidas por checkpoint oficial;
 - [ ] gerar curvas de armazenamento, escrita e consulta estruturada.
