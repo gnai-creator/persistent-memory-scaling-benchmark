@@ -1,0 +1,64 @@
+{
+  "schema_version": "trustgraph-phase81-paired-v1",
+  "label": "TrustGraph graph-embeddings",
+  "workload": "979 frozen support-valid MultiWOZ Phase 8.1 questions",
+  "candidate_protocol": {
+    "bundle_count": 37,
+    "candidate_memories_per_question": 16,
+    "top_k": 5,
+    "same_reader": "Qwen3 14B",
+    "same_reader_prompt": true
+  },
+  "preparation_seconds": {
+    "collection_setup": 5.574840198998572,
+    "ingestion_submission": 0.8280229389783926,
+    "indexing_readiness": 14.818941631005146,
+    "total": 21.22180476898211
+  },
+  "result": {
+    "examples": 979,
+    "retrieval_recall": 0.6046986721144024,
+    "diagnostic_answer_score": 0.44221234351011185,
+    "reader_input_tokens_total": 2002598,
+    "reader_input_tokens_mean": 2045.5546475995914,
+    "retrieval_latency_ms": {
+      "mean": 178.52307174931397,
+      "p50": 175.41959800291806,
+      "p95": 265.0416209100513,
+      "max": 356.449276994681
+    },
+    "reader_latency_ms": {
+      "mean": 1235.6115094774527,
+      "p50": 1203.2562909880653,
+      "p95": 1652.145346003817,
+      "max": 3635.1559789909516
+    },
+    "combined_latency_ms": {
+      "mean": 1414.1345812267668,
+      "p50": 1382.7775809913874,
+      "p95": 1829.6803931123575,
+      "max": 3759.848867979599
+    },
+    "effective_mean_with_amortized_preparation_ms": 1435.8116034627037
+  },
+  "comparison_to_asm_operational": {
+    "asm_mean_from_total_duration_ms": 1294.1161909867083,
+    "trustgraph_path_slower_percent": 9.274158771520336,
+    "trustgraph_effective_slower_percent": 10.949203283513409,
+    "trustgraph_more_reader_tokens_percent": 87.12102466951104
+  },
+  "decision": {
+    "complete": true,
+    "valid": true,
+    "graph_rag_result": false
+  },
+  "provenance": {
+    "raw_result": "results/raw/tg-phase81-paired-full-v3.json",
+    "raw_result_sha256": "952dff6285c772635dc59535df37b2259698f0b74876df4ad5d78e3343ec4756"
+  },
+  "limitations": [
+    "This is TrustGraph graph-embeddings retrieval, not full GraphRAG synthesis.",
+    "ASM Phase 8.1 replays frozen retrieval IDs and does not rerun neural retrieval.",
+    "The ASM operational run occurred with concurrent GPU training; latency conditions are not identical."
+  ]
+}
