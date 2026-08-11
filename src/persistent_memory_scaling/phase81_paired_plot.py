@@ -153,6 +153,10 @@ def render(
         "• 0/10 final-response sources mappable\n"
         "• query 11 failed identically in 2/2 isolated attempts\n"
         "• not promoted to the 979-question comparison\n\n"
+        "SEPARATE LONGMEMEVAL SETUP INCIDENT\n"
+        "• 119 collection registrations succeeded\n"
+        "• collection 120 stalled 600 s → HTTP 504\n"
+        "• paced, resumable setup reached 500/500\n\n"
         "Full GraphRAG Recall@5 is grounding from a separate\n"
         "official explainability replay, not final-response sources.",
         transform=axis.transAxes, va="top", fontsize=11, linespacing=1.35,

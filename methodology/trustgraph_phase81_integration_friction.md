@@ -247,3 +247,27 @@ Silently skipping it would change the frozen question set and overstate completi
 reliability. The ten successful answers remain a diagnostic sample, while the failed
 question is reported as an observed execution failure rather than assigned a fabricated
 answer or retrieval score.
+
+## LongMemEval collection-registration timeout
+
+The first TrustGraph graph-embeddings attempt on LongMemEval-S failed before ingestion or
+GPT-4o evaluation. The paired isolation protocol requires one collection per frozen
+candidate bundle, which produces 500 collections for this corpus. The runner registered
+119 collections rapidly and then the request for collection 120 remained outstanding for
+600 seconds. The API gateway returned HTTP 504 to the client. Gateway and control-service
+logs showed that collections 1–119 were persisted successfully; the collection-120
+request did not reach the librarian handler during the timeout window. Cassandra,
+Qdrant, Pulsar, the API gateway, and the TrustGraph control container remained running.
+
+The runner was changed externally to make this administrative phase resumable and
+observable. It now lists and skips already persisted collections, uses a separate
+30-second administrative client for each attempt, recreates that client after failure,
+allows four bounded attempts with a two-second delay, introduces 50 ms of pacing between
+registrations, and logs every collection and attempt. No TrustGraph package, image, or
+service configuration was patched.
+
+On restart, the 119 existing collections were reused. The runner passed collection 120
+and reached at least collection 175, all on the first corrected attempt. This supports a
+burst/request-path setup failure rather than a bad LongMemEval record. The incident is
+reported as integration friction and setup reliability; it is not included in retrieval
+latency or GPT-4o reader latency.

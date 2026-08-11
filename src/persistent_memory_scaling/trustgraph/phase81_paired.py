@@ -73,7 +73,17 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--max-examples", type=int, default=0)
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--collection-timeout-seconds", type=int, default=30)
+    parser.add_argument("--collection-attempts", type=int, default=4)
+    parser.add_argument("--collection-retry-delay-seconds", type=float, default=2.0)
+    parser.add_argument("--collection-pacing-seconds", type=float, default=0.05)
     args = parser.parse_args()
+    if args.collection_attempts < 1:
+        parser.error("--collection-attempts must be at least 1")
+    if args.collection_timeout_seconds < 1:
+        parser.error("--collection-timeout-seconds must be at least 1")
+    if args.collection_retry_delay_seconds < 0 or args.collection_pacing_seconds < 0:
+        parser.error("collection retry and pacing delays cannot be negative")
 
     token = args.token or os.environ.get(args.token_env, "")
     if not token:
@@ -111,16 +121,45 @@ def main() -> int:
     setup_started = perf_counter()
     collections = client.api.collection()
     known_collections = {item.collection for item in collections.list_collections()}
+    created_collections = 0
     for index, collection_name in enumerate(collection_for_signature.values(), 1):
         if collection_name in known_collections:
             continue
-        collections.update_collection(
-            collection=collection_name,
-            name=f"PMSB Phase 8.1 bundle {index:02d}",
-            description="One frozen 16-memory MultiWOZ Phase 8.1 candidate corpus",
-            tags=["pmsb", "phase81", "paired", "bundle"],
-        )
-    if any(name not in known_collections for name in collection_for_signature.values()):
+        for attempt in range(1, args.collection_attempts + 1):
+            try:
+                # Recreate the short-timeout administrative client on every attempt.
+                # A timed-out request/response client may still have an outstanding
+                # backend operation and must not be silently reused.
+                admin = TrustGraphClient(
+                    args.url, token, flow_id=args.flow, collection=args.collection,
+                    timeout=args.collection_timeout_seconds,
+                )
+                admin.api.collection().update_collection(
+                    collection=collection_name,
+                    name=f"PMSB {args.corpus} bundle {index:03d}",
+                    description=f"One frozen {args.corpus} candidate corpus",
+                    tags=["pmsb", args.corpus, "paired", "bundle"],
+                )
+                known_collections.add(collection_name)
+                created_collections += 1
+                print(
+                    f"[collection {index}/{len(collection_for_signature)}] "
+                    f"registered attempt={attempt}",
+                    flush=True,
+                )
+                break
+            except Exception as exc:
+                print(
+                    f"[collection {index}/{len(collection_for_signature)}] "
+                    f"attempt {attempt} failed: {type(exc).__name__}: {exc}",
+                    file=sys.stderr, flush=True,
+                )
+                if attempt == args.collection_attempts:
+                    raise
+                time.sleep(args.collection_retry_delay_seconds)
+        if args.collection_pacing_seconds:
+            time.sleep(args.collection_pacing_seconds)
+    if created_collections:
         time.sleep(2)
     setup_seconds = perf_counter() - setup_started
     ingestion_started = perf_counter()

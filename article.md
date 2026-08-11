@@ -206,6 +206,15 @@ We did not skip the question and continue. Doing so would alter the frozen 979-q
 protocol and conceal a reliability failure. The run remains a ten-question diagnostic,
 not a completed Full GraphRAG result.
 
+LongMemEval-S exposed another setup boundary before any retrieval or GPT-4o call. Its
+paired isolation design required 500 candidate-bundle collections. TrustGraph registered
+119 rapidly, but collection 120 remained pending for 600 seconds and surfaced as HTTP
+504. The persisted collections were retained. A benchmark-side correction added
+idempotent resume, a short-lived administrative client per attempt, bounded retries,
+50 ms registration pacing, and per-collection logs. The resumed setup passed collection
+120 and continued normally. This administrative failure is reported as integration
+friction and is excluded from query and reader latency.
+
 > A benchmark result is not only the final metric. It is also the operational path
 > required to obtain that metric reproducibly.
 
