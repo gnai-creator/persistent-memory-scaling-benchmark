@@ -35,6 +35,11 @@ tracejada de **0,115 GB peak RSS** como referência operacional separada
 “ASM-CM + Bridge 8.1”. A própria anotação declara “not TG-2 scaling”; o ponto não é
 usado para ajustar tendência, extrapolação ou intervalo de confiança.
 
+Os outros três quadrantes agora mostram explicitamente
+“ASM-CM + Bridge 8.1: NOT MEASURED UNDER TG-2”. Isso evita uma omissão visual sem
+inventar valores de storage, structured-query latency ou ingestion throughput a
+partir de um protocolo MultiWOZ incompatível.
+
 A série ASM-CM será adicionada quando o gate ASM-TG-2 produzir, por checkpoint:
 
 - RAM total do processo/serviços ASM;

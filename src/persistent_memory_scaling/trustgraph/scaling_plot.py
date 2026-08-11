@@ -36,7 +36,10 @@ def render_plots(points: list[dict[str, float]], projection: dict[str, Any],
 
     plt.style.use("dark_background")
     figure, axes = plt.subplots(2, 2, figsize=(14, 9), constrained_layout=True)
-    figure.suptitle("TrustGraph TG-2 — measured scaling and storage projection", fontsize=18, weight="bold")
+    figure.suptitle(
+        "TrustGraph TG-2 scaling with ASM-CM operational reference",
+        fontsize=18, weight="bold",
+    )
     events = [item["events"] for item in points]
     disk = [item["disk_bytes"] / 1e9 for item in points]
     axis = axes[0, 0]
@@ -53,6 +56,12 @@ def render_plots(points: list[dict[str, float]], projection: dict[str, Any],
     axis.set_ylabel("Physical storage (GB)")
     axis.set_title("Storage — solid: measured; dotted: projected")
     axis.legend(fontsize=8)
+    if asm_reference is not None:
+        axis.text(
+            .03, .73, "ASM-CM + Bridge 8.1\nNOT MEASURED UNDER TG-2",
+            transform=axis.transAxes, fontsize=8, color="#a9b1d6",
+            bbox={"boxstyle": "round,pad=.4", "facecolor": "#16161e", "edgecolor": "#565f89"},
+        )
 
     ram_axis = axes[0, 1]
     ram_points = [item for item in points if "stack_ram_peak_bytes" in item]
@@ -97,6 +106,13 @@ def render_plots(points: list[dict[str, float]], projection: dict[str, Any],
                          "o-", color="#7aa2f7", linewidth=2.5)
         current.set_ylabel(ylabel)
         current.set_title(title)
+        if asm_reference is not None:
+            current.text(
+                .03, .9, "ASM-CM + Bridge 8.1: NOT MEASURED UNDER TG-2",
+                transform=current.transAxes, fontsize=8, color="#a9b1d6", va="top",
+                bbox={"boxstyle": "round,pad=.35", "facecolor": "#16161e",
+                      "edgecolor": "#565f89"},
+            )
     for current in axes.flat:
         current.set_xscale("log")
         current.set_xlabel("Events (log scale)")
