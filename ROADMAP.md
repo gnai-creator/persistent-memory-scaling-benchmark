@@ -162,7 +162,8 @@ Progresso oficial:
 
 - [x] três repetições pareadas em `100` eventos;
 - [x] três repetições pareadas em `1k` eventos;
-- [ ] três repetições pareadas em `10k`, `100k` e `1M`;
+- [x] três repetições pareadas em `10k`;
+- [ ] três repetições pareadas em `100k` e `1M`;
 
 ### Gate
 

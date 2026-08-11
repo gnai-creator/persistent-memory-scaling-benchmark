@@ -10,6 +10,7 @@ def test_parse_bytes_decimal_and_binary_units():
     assert parse_bytes("1.5kB") == 1500
     assert parse_bytes("1.5MiB") == 1_572_864
     assert parse_bytes("0B") == 0
+    assert parse_bytes("1e+03kB") == 1_000_000
 
 
 def test_parse_pair():

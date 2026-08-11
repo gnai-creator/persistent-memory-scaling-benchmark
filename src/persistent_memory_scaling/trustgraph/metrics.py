@@ -31,7 +31,7 @@ def parse_bytes(value: str) -> int:
     value = value.strip()
     if value in {"", "0B"}:
         return 0
-    match = re.fullmatch(r"([0-9]+(?:\.[0-9]+)?)\s*([KMGT]?i?B)", value, re.I)
+    match = re.fullmatch(r"([0-9]+(?:\.[0-9]+)?(?:e[+-]?[0-9]+)?)\s*([KMGT]?i?B)", value, re.I)
     if not match:
         raise ValueError(f"unsupported byte value: {value!r}")
     return round(float(match.group(1)) * _UNITS[match.group(2).upper()])
