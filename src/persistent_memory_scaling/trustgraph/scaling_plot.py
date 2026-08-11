@@ -54,8 +54,32 @@ def render_plots(points: list[dict[str, float]], projection: dict[str, Any],
     axis.set_title("Storage — solid: measured; dotted: projected")
     axis.legend(fontsize=8)
 
-    specs = ((axes[0, 1], "ram_bytes", 1e6, "Paired RAM delta (MB)", "RAM delta — measured only"),
-             (axes[1, 0], "query_ms", 1, "Mean latency (ms)", "Structured query — measured only"),
+    ram_axis = axes[0, 1]
+    ram_points = [item for item in points if "stack_ram_peak_bytes" in item]
+    repeated = [item for item in ram_points if item.get("repetitions", 1) > 1]
+    single = [item for item in ram_points if item.get("repetitions", 1) == 1]
+    if repeated:
+        ram_events = [item["events"] for item in repeated]
+        ram_values = [item["stack_ram_peak_bytes"] / 1e9 for item in repeated]
+        errors = [[(item["stack_ram_peak_bytes"] - item["stack_ram_ci95_low_bytes"]) / 1e9
+                   for item in repeated],
+                  [(item["stack_ram_ci95_high_bytes"] - item["stack_ram_peak_bytes"]) / 1e9
+                   for item in repeated]]
+        ram_axis.errorbar(ram_events, ram_values, yerr=errors, fmt="o-", capsize=5,
+                          color="#7aa2f7", linewidth=2.5, label="Mean peak ± 95% CI (n=3)")
+    if single:
+        ram_axis.scatter([item["events"] for item in single],
+                         [item["stack_ram_peak_bytes"] / 1e9 for item in single],
+                         marker="D", s=70, color="#ffca5c", label="Single run (n=1)", zorder=5)
+    for item in ram_points:
+        ram_axis.annotate(f'n={item.get("repetitions", 1)}',
+                          (item["events"], item["stack_ram_peak_bytes"] / 1e9),
+                          xytext=(0, 10), textcoords="offset points", ha="center", fontsize=8)
+    ram_axis.set_ylabel("Peak container RAM (GB)")
+    ram_axis.set_title("TrustGraph stack RAM — measured peak (not 30 s mean)")
+    ram_axis.legend(fontsize=8)
+
+    specs = ((axes[1, 0], "query_ms", 1, "Mean latency (ms)", "Structured query — measured only"),
              (axes[1, 1], "events_per_second", 1, "Events/s", "Ingestion throughput — measured only"))
     for current, key, divisor, ylabel, title in specs:
         selected = [(item["events"], item[key] / divisor) for item in points if key in item]

@@ -38,8 +38,8 @@ def render(data: dict, png: Path, svg: Path) -> None:
     axis.set_xticks(x, labels)
     axis.set_ylabel("Mean memory (GB)")
     axis.set_ylim(0, max(ram) * 1.18)
-    axis.set_title("TrustGraph stack memory footprint — TG-2", fontsize=18, weight="bold")
-    axis.text(.5, -.14, "Only TrustGraph resources are shown. System, ASM, desktop, and driver memory are excluded.",
+    axis.set_title("TrustGraph stack memory footprint — TG-2 (30 s idle mean)", fontsize=18, weight="bold")
+    axis.text(.5, -.14, "30 s mean, not peak. Only TrustGraph resources are shown; system and ASM are excluded.",
               transform=axis.transAxes, ha="center", color="#a9b1d6")
     axis.grid(axis="y", alpha=.2)
     axis.legend(ncol=2, fontsize=10)

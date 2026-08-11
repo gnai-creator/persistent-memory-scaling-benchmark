@@ -1,6 +1,6 @@
 [
-  {"events": 100, "disk_bytes": 2140842.6666666665, "ram_bytes": 35429985.0, "query_ms": 41.239582567747374, "events_per_second": 11.642057062203696},
-  {"events": 1000, "disk_bytes": 19615744.0, "ram_bytes": 82707477.33333333, "query_ms": 41.22133240035813, "events_per_second": 82.74663169065612},
-  {"events": 10000, "disk_bytes": 183089834.66666666, "ram_bytes": 300362848.6666667, "query_ms": 42.127648066671096, "events_per_second": 194.8620791208126},
-  {"events": 100000, "disk_bytes": 1804693504.0, "ram_bytes": 7319062.0, "query_ms": 42.115028078842445, "events_per_second": 232.57646637383584}
+  {"events": 100, "disk_bytes": 2140842.6666666665, "stack_ram_peak_bytes": 4474693573.333333, "stack_ram_ci95_low_bytes": 4440211597.128617, "stack_ram_ci95_high_bytes": 4509175549.538049, "repetitions": 3, "query_ms": 41.239582567747374, "events_per_second": 11.642057062203696},
+  {"events": 1000, "disk_bytes": 19615744.0, "stack_ram_peak_bytes": 4549065223.0, "stack_ram_ci95_low_bytes": 4460179316.262967, "stack_ram_ci95_high_bytes": 4637951129.737033, "repetitions": 3, "query_ms": 41.22133240035813, "events_per_second": 82.74663169065612},
+  {"events": 10000, "disk_bytes": 183089834.66666666, "stack_ram_peak_bytes": 4715266964.666667, "stack_ram_ci95_low_bytes": 4622441275.961764, "stack_ram_ci95_high_bytes": 4808092653.37157, "repetitions": 3, "query_ms": 42.127648066671096, "events_per_second": 194.8620791208126},
+  {"events": 100000, "disk_bytes": 1804693504.0, "stack_ram_peak_bytes": 4810059286.0, "repetitions": 1, "query_ms": 42.115028078842445, "events_per_second": 232.57646637383584}
 ]

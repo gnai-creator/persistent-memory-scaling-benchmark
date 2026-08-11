@@ -31,6 +31,13 @@ containers e VRAM atribuída aos seus processos. VRAM do ASM, desktop, driver e
 outros processos permanece nos dados de auditoria, mas foi excluída da figura
 para não ser confundida com custo do framework.
 
+### Duas estatísticas de RAM, sem contradição
+
+Este gráfico usa **RAM média dos containers durante uma janela idle de 30 s**:
+4,27 GB no c100k. O painel de scaling usa outra estatística, **pico de RAM dos
+containers durante a janela carregada**: 4,81 GB no c100k. Média e pico não devem
+ser intercambiados; ambos permanecem identificados com duração, fase e unidade.
+
 ## Interpretação
 
 O caminho estruturado medido do TrustGraph não criou um processo GPU

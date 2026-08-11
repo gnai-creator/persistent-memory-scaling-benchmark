@@ -1,0 +1,56 @@
+{
+  "schema_version": "asm-phase81-operational-point-v1",
+  "label": "ASM-CM + Memory Bridge 8.1",
+  "workload": "979 frozen support-valid MultiWOZ questions",
+  "execution_kind": "frozen ASM retrieval replay plus Bridge compaction and Qwen3 14B reader",
+  "duration_seconds": 1266.9397509759874,
+  "sample_interval_seconds": 1.0,
+  "sample_count": 1217,
+  "resources": {
+    "bridge_rss_peak_bytes": 115306496,
+    "bridge_vram_peak_bytes": 0,
+    "reader_rss_baseline_bytes": 1984335872,
+    "reader_rss_peak_bytes": 9885642752,
+    "reader_rss_incremental_peak_bytes": 7901306880,
+    "reader_vram_baseline_bytes": 15047065600,
+    "reader_vram_peak_bytes": 15049162752,
+    "reader_vram_incremental_peak_bytes": 2097152
+  },
+  "systems": {
+    "asm_compact": {
+      "retrieval_recall": 0.9356486210418795,
+      "diagnostic_answer_score": 0.6647984127528994,
+      "reader_input_tokens_total": 1070228,
+      "reader_latency_ms_mean": 1289.7923752284464
+    },
+    "vector": {
+      "retrieval_recall": 0.6996935648621042,
+      "diagnostic_answer_score": 0.496768005628403,
+      "reader_input_tokens_total": 1994408,
+      "reader_latency_ms_mean": 1065.4105506935489
+    },
+    "bm25": {
+      "retrieval_recall": 0.7589376915219612,
+      "diagnostic_answer_score": 0.5684805887685818,
+      "reader_input_tokens_total": 2148717,
+      "reader_latency_ms_mean": 1114.702332139948
+    }
+  },
+  "decision": {
+    "complete": true,
+    "promoted": true,
+    "reader_token_usage_complete": true
+  },
+  "concurrent_condition": "A separate ASM training process remained active and was excluded from Bridge process accounting; shared-GPU contention can affect reader latency.",
+  "limitations": [
+    "Phase 8.1 replays frozen ASM retrieval IDs; it does not rerun neural retrieval.",
+    "The reader is an external shared service and is reported separately from Bridge RSS/VRAM.",
+    "This is an operational point, not an ASM-CM 100-to-100k scaling curve."
+  ],
+  "provenance": {
+    "resource_window": "results/raw/asm-phase81-tg2-full-resource.json",
+    "resource_window_sha256": "20bc3d1fa5a90df64fd33b18d20ade30c0060d69713c9f6af536135f5c6bff57",
+    "phase81_results_path": "../asm-memory-bridge/runs/asm_memory_bridge_phase81_tg2_full/results.json",
+    "phase81_results_sha256": "1d05dcbc2180385e14ca43cacb00c3167ad8468abcc0dd2ce5f0879b1bf65ca9"
+  }
+}
