@@ -328,6 +328,10 @@ Bridge. O adaptador ASM-CM futuro deverá implementar o contrato já congelado.
 - [ ] comparar capacidade exata, auditabilidade e reconstrução;
 - [ ] identificar curvas de crossover e perdas de capacidade;
 - [ ] avaliar uma composição TrustGraph + ASM-CM apenas após a comparação pura.
+- [ ] executar scaling horizontal ASM-CM com `1, 2, 4, 8, 16, 32` workers sobre
+  namespaces independentes;
+- [ ] separar throughput agregado, latência causal por stream, RAM/VRAM incremental,
+  eficiência de speedup, agentes/GPU e custo por 1.000 agentes;
 
 ### Gate
 
@@ -336,14 +340,30 @@ Bridge. O adaptador ASM-CM futuro deverá implementar o contrato já congelado.
 - diferenças de capacidade acompanham diferenças de custo;
 - resultados negativos de qualquer sistema são preservados.
 
+## Publicação final
+
+O benchmark concluído produzirá `article.md`, em inglês, com o título editorial
+congelado:
+
+> **TrustGraph vs. ASM-CM: What 2,500 GitHub Stars Don’t Tell You About Memory,
+> Reliability, and Integration Cost**
+
+O número de estrelas será tratado apenas como contexto de adoção/visibilidade e
+verificado novamente na data de publicação. Não será usado como métrica técnica.
+Todos os claims sobre memória, confiabilidade, integração, qualidade e latência
+deverão apontar para resultados completos, manifestos e limitações do protocolo.
+
+O fechamento é controlado por `configs/finalization.json` e pelo gate read-only
+`pmsb-finalize-check`. A sequência editorial e as regras dos gráficos estão em
+`methodology/final_publication_checklist.md`.
+
 ## Próxima ação
 
-Implementar TG-1, começando por health checks e coleta de baseline vazio antes
-de qualquer novo evento.
+Fechar as matrizes pareadas restantes sem promover checkpoints parciais:
 
-1. schemas e `run_manifest.json`;
-2. preflight de hardware e runtime;
-3. configuração local fixada por digest;
-4. adaptador mínimo da API pública;
-5. smoke de 100 eventos executado duas vezes;
-6. relatório e decisão de promoção para TG-1.
+1. concluir o híbrido ASM Phase 8.1 de 979 perguntas;
+2. concluir os seis híbridos LongMemEval-S de 500 perguntas;
+3. executar TrustGraph graph-embeddings e Full GraphRAG nas 128 perguntas livres;
+4. executar os dois caminhos TrustGraph no LongMemEval-S + GPT-4o;
+5. concluir o Full GraphRAG MultiWOZ de 979 perguntas;
+6. tornar verde o gate de finalização, regenerar gráficos e fechar os artigos.

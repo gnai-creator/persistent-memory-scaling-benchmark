@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "benchmark_ready": false,
+  "protocols": [
+    {
+      "id": "multiwoz_phase81_979",
+      "label": "MultiWOZ Phase 8.1 \u2014 979 questions",
+      "expected_questions": 979,
+      "ready": false,
+      "artifacts": [
+        {
+          "artifact_id": "asm_phase81_baseline",
+          "path": "../asm-memory-bridge/runs/asm_memory_bridge_phase81/results.json",
+          "status": "ready",
+          "detail": "complete=True; examples=979/979"
+        },
+        {
+          "artifact_id": "asm_phase81_hybrid",
+          "path": "../asm-memory-bridge/runs/asm_memory_bridge_phase81_hybrid/results.json",
+          "status": "ready",
+          "detail": "979/979 rows for asm_vector_bm25_compact"
+        },
+        {
+          "artifact_id": "trustgraph_graph_embeddings",
+          "path": "results/raw/tg-phase81-paired-full-v3.json",
+          "status": "ready",
+          "detail": "979/979 questions"
+        },
+        {
+          "artifact_id": "trustgraph_full_graphrag",
+          "path": "results/raw/tg-phase81-full-graphrag-full.json",
+          "status": "incomplete",
+          "detail": "10/979 questions"
+        }
+      ]
+    },
+    {
+      "id": "free_language_128",
+      "label": "Free-language retrieval \u2014 128 questions",
+      "expected_questions": 128,
+      "ready": false,
+      "artifacts": [
+        {
+          "artifact_id": "asm_r32",
+          "path": "../asm-memory-bridge/runs/dual_asm_r32/results.json",
+          "status": "ready",
+          "detail": "complete=True; examples=128/128"
+        },
+        {
+          "artifact_id": "trustgraph_graph_embeddings",
+          "path": "results/raw/tg-r32-free-language-graph-embeddings.json",
+          "status": "missing",
+          "detail": "file does not exist"
+        },
+        {
+          "artifact_id": "trustgraph_full_graphrag",
+          "path": "results/raw/tg-r32-free-language-full-graphrag.json",
+          "status": "missing",
+          "detail": "file does not exist"
+        }
+      ]
+    },
+    {
+      "id": "longmemeval_s_500_gpt4o",
+      "label": "LongMemEval-S + GPT-4o \u2014 500 questions",
+      "expected_questions": 500,
+      "ready": false,
+      "artifacts": [
+        {
+          "artifact_id": "asm_bridge81_gpt4o",
+          "path": "../asm-memory-bridge/runs/asm_bridge81_longmemeval_gpt4o/results.json",
+          "status": "ready",
+          "detail": "complete=True; examples=500/500"
+        },
+        {
+          "artifact_id": "asm_hybrids_gpt4o",
+          "path": "../asm-memory-bridge/runs/asm_bridge81_longmemeval_hybrids/results.json",
+          "status": "running",
+          "detail": "vector_bridge81_gpt4o=377/500, bm25_bridge81_gpt4o=377/500, asm_vector_rrf_bridge81_gpt4o=377/500, asm_bm25_rrf_bridge81_gpt4o=377/500, vector_bm25_rrf_bridge81_gpt4o=377/500, asm_vector_bm25_rrf_bridge81_gpt4o=377/500"
+        },
+        {
+          "artifact_id": "trustgraph_graph_embeddings_gpt4o",
+          "path": "results/raw/tg-longmemeval-s-500-graph-embeddings-gpt4o.json",
+          "status": "missing",
+          "detail": "file does not exist"
+        },
+        {
+          "artifact_id": "trustgraph_full_graphrag_gpt4o",
+          "path": "results/raw/tg-longmemeval-s-500-full-graphrag-gpt4o.json",
+          "status": "missing",
+          "detail": "file does not exist"
+        }
+      ]
+    }
+  ]
+}

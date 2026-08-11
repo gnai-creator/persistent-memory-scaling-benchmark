@@ -1,0 +1,26 @@
+
+[2026-08-11T14:06:34-03:00] starting phase81_full
+[graph-rag:multiwoz:test:PMUL0815.json:train:train-leaveat] attempt 1 failed: TrustGraphException: graph-rag-error: LLM returned no response; retrying in 330s
+
+[2026-08-11T14:12:48-03:00] starting phase81_full
+[graph-rag:multiwoz:test:PMUL0815.json:train:train-leaveat] attempt 1 failed: TrustGraphException: graph-rag-error: LLM returned no response; retrying in 330s
+
+[2026-08-11T14:15:26-03:00] starting phase81_full
+[graph-rag:multiwoz:test:PMUL0815.json:train:train-leaveat] attempt 1 failed: ProtocolException: Status code 504; retrying in 330s
+
+[2026-08-11T14:25:57-03:00] starting phase81_full
+TrustGraph Ollama ready: http://172.19.0.1:11435 model=qwen3:14b-pmsb-bounded
+
+[2026-08-11T14:26:50-03:00] starting phase81_full
+TrustGraph Ollama ready: http://172.19.0.1:11435 model=qwen3:14b-pmsb-bounded
+[1/979] score=0.000 latency=7997ms sources=0
+[2/979] score=0.000 latency=10698ms sources=0
+[3/979] score=0.000 latency=7710ms sources=0
+[4/979] score=0.000 latency=7429ms sources=0
+[5/979] score=1.000 latency=9788ms sources=0
+[6/979] score=0.000 latency=8411ms sources=0
+[7/979] score=0.000 latency=12188ms sources=0
+[8/979] score=0.000 latency=10232ms sources=0
+[9/979] score=0.000 latency=8083ms sources=0
+[10/979] score=0.000 latency=12803ms sources=0
+[graph-rag:multiwoz:test:PMUL0815.json:train:train-leaveat] attempt 1 failed: TrustGraphException: graph-rag-error: the JSON object must be str, bytes or bytearray, not NoneType; retrying in 330s

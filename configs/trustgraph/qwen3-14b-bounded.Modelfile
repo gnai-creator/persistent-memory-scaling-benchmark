@@ -1,0 +1,4 @@
+FROM qwen3:14b
+SYSTEM /no_think
+PARAMETER temperature 0
+PARAMETER num_predict 1024

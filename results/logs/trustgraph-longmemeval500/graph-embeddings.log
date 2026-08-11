@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/src/persistent_memory_scaling/trustgraph/phase81_paired.py", line 242, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/src/persistent_memory_scaling/trustgraph/phase81_paired.py", line 117, in main
+    collections.update_collection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        collection=collection_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        tags=["pmsb", "phase81", "paired", "bundle"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/.venv/lib/python3.14/site-packages/trustgraph/api/collection.py", line 114, in update_collection
+    object = self.request(input)
+  File "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/.venv/lib/python3.14/site-packages/trustgraph/api/collection.py", line 43, in request
+    return self.api.request(f"collection-management", request)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/.venv/lib/python3.14/site-packages/trustgraph/api/api.py", line 206, in request
+    raise ProtocolException(f"Status code {resp.status_code}")
+trustgraph.api.exceptions.ProtocolException: Status code 504

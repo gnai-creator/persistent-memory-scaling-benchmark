@@ -27,6 +27,12 @@ O answer score de 66,48% é o rerun pareado. O resultado promovido anterior foi
 
 ![Paired Phase 8.1 comparison](../screens/phase81-paired-trustgraph-vs-asm.png)
 
+The complete chart separates promoted 979-question results from the hatched Full
+GraphRAG diagnostic (`n=10/979`). Its Full GraphRAG Recall@5 is explainability grounding,
+its token count is TrustGraph's reported internal input rather than reader-context
+accounting, and its latency is end-to-end. These values are shown for operational
+diagnosis and are not treated as a completed paired result.
+
 ## Latência
 
 O retrieval TrustGraph adicionou 178,5 ms por pergunta antes do reader. Retrieval
@@ -57,6 +63,127 @@ setup, ingestion, indexing, query, and reader latency.
 
 A system can be architecturally capable and still impose unnecessary operational
 friction on the people trying to use it correctly.
+
+## Full GraphRAG extension — diagnostic smoke, not the final 979 result
+
+The chart will retain the measured `graph-embeddings` ablation and add Full
+GraphRAG as a separate system. Full GraphRAG is not represented by the 60.47%
+graph-embeddings value.
+
+The first valid Full GraphRAG diagnostic sample completed 10 frozen questions
+with Qwen3 14B synthesis and the deployment-supported
+`sentence-transformers/all-MiniLM-L6-v2` embedding model:
+
+| Metric | Full GraphRAG smoke |
+|---|---:|
+| Questions | 10 |
+| Grounding Recall@5 | 50.00% |
+| Diagnostic answer score | 21.05% |
+| Mean end-to-end latency | 19,529.8 ms/question |
+| Internal input tokens | 2,352 |
+| Output tokens | 9,259 |
+| Final-response sources mappable to memory IDs | 0/10 |
+| Explainability grounding mappings | 10/10 |
+
+Grounding Recall@5 is derived from the ordered `Exploration.entities` list in an
+official Full GraphRAG explainability replay. The replay averaged 20,687.8 ms per
+question and is accounted separately; it is not added to the end-to-end latency.
+The complete 979-question run is required before this diagnostic bar can be
+presented as a result over the full paired protocol.
+
+Obtaining this apparently simple Recall@5 number required explicit graph
+construction, stable URI-to-memory mappings, isolated collections, graph and
+embedding readiness barriers, a complete GraphRAG call, and a second official
+explainability pass because the final public payload returned no mappable sources.
+The complete operational record, including excluded harness errors, is maintained
+in `methodology/trustgraph_phase81_integration_friction.md`.
+
+### Full GraphRAG runtime reliability
+
+During the attempted 979-question Full GraphRAG run, the first new request after the
+10-question smoke returned HTTP 504 after approximately 5 minutes 34 seconds and stopped
+the runner. The 10 completed rows remained intact. The resumable runner now checkpoints
+per question and retries transient GraphRAG and explainability failures with exponential
+backoff. Per-question attempt counts are retained so reliability failures and retry time
+remain visible in the final operational measurements.
+
+![Full GraphRAG attempts per question](../screens/full-graphrag-attempts-per-question.png)
+
+The attempts chart treats missing values from the original 10-question smoke as
+unrecorded gaps. It does not assume that legacy rows succeeded on their first attempt.
+
+The initial 504 sequence occurred under measured GPU contention from concurrent Qwen3
+and ASM workloads (99% GPU utilization; 21,994/24,564 MiB allocated). It is preserved
+as a diagnostic integration event, not treated as an isolated TrustGraph reliability
+rate. The clean continuation must run after the competing reader workload releases the
+GPU. Restarting or rebuilding graph and vector storage is not required.
+
+### Bounded rerun and deterministic question failure
+
+A later isolated run showed that contention was not the only operational issue. The
+dedicated TrustGraph Ollama endpoint at `172.19.0.1:11435` first had to be restored;
+without it, the public GraphRAG error was `LLM returned no response`, while the container
+log showed the underlying connection refusal. Once connectivity was restored, the
+gateway returned HTTP 504 while Ollama continued an abandoned internal generation beyond
+25,000 decoded tokens. A retry after 330 seconds could therefore overlap backend work
+that the client timeout had not cancelled.
+
+The corrected deployment used the dedicated model alias
+`qwen3:14b-pmsb-bounded`, `/no_think`, and `num_predict=1024`. It also used a new
+flow, collection namespace, and `v2` artifact so that results from materially different
+runtime configurations could not be merged. TrustGraph source code and container images
+were not modified.
+
+The bounded run produced the following ten-question diagnostic checkpoint:
+
+| Metric | Bounded diagnostic |
+|---|---:|
+| Questions completed | 10/979 |
+| Mean Full GraphRAG latency | 9,533.8 ms/question |
+| Minimum / maximum latency | 7,428.5 / 12,803.5 ms |
+| Diagnostic answer score | 10.00% |
+| Internal input tokens | 2,512 |
+| Output tokens | 7,021 |
+| Final-response sources mappable to memory IDs | 0/10 |
+| Grounding Recall@5 via explainability | 50.00% |
+
+The next frozen question,
+`multiwoz:test:PMUL0815.json:train:train-leaveat`, failed with:
+
+```text
+graph-rag-error: the JSON object must be str, bytes or bytearray, not NoneType
+```
+
+To test whether this was caused by accumulated state after ten requests, the question
+was executed alone against the same bounded flow and the same canonical indexed
+collection. Both isolated attempts failed with the identical exception. The diagnostic
+used a two-second backoff to avoid waiting 330 seconds during reproduction and wrote to
+a separate target. It did not modify the ten-row checkpoint.
+
+This 2/2 isolated reproduction supports an input-dependent pipeline failure under the
+tested configuration, rather than a failure caused merely by request position. The
+public exception shows that an internal component attempted to parse JSON from a `None`
+value, but it does not identify which internal stage produced that value; no more
+specific root cause is asserted.
+
+The runner was stopped at 10/979. The failing question was not skipped because skipping
+would alter the frozen workload and conceal a reliability failure. Consequently, this
+checkpoint is reported only as a diagnostic sample and cannot occupy the final
+979-question Full GraphRAG comparison bar.
+
+### Observed host concurrency
+
+On this benchmark host, two local Ollama instances ran simultaneously, including a
+Qwen3 14B reader, alongside two ASM-CM processes; another ASM-CM workload used an
+external GPT-4o reader. Because GPT-4o was remote, it did not consume local model VRAM.
+In the same loaded environment, the TrustGraph Full GraphRAG path repeatedly timed out
+and did not advance beyond its existing checkpoint.
+
+The defensible conclusion is limited to the tested deployment: TrustGraph could not be
+added successfully to this host's active workload without serializing or reallocating
+resources, whereas the concurrent ASM-CM processes remained operational. This is an
+observed integration-capacity difference, not proof that TrustGraph cannot reach the
+same concurrency with different hardware, remote inference or another configuration.
 
 Os workarounds ficaram exclusivamente no runner do benchmark. Nenhum pacote,
 container ou código do TrustGraph foi modificado.

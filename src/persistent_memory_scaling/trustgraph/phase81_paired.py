@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -13,6 +14,7 @@ from time import perf_counter
 from typing import Any
 
 from .preflight import write_json
+from .corpora import load_instances
 
 
 def entity_uri(memory_id: str) -> str:
@@ -53,32 +55,49 @@ def graph_embeddings_query(flow: Any, text: str, collection: str, limit: int) ->
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", default="http://localhost:8888/")
-    parser.add_argument("--token", required=True)
+    parser.add_argument("--token")
+    parser.add_argument("--token-env", default="IAM_BOOTSTRAP_TOKEN")
     parser.add_argument("--flow", default="default")
     parser.add_argument("--collection", required=True)
     parser.add_argument("--asm-root", type=Path, required=True)
-    parser.add_argument("--multiwoz-root", type=Path, required=True)
-    parser.add_argument("--phase8-results", type=Path, required=True)
+    parser.add_argument("--corpus", choices=("multiwoz979", "free128", "longmemeval500"), default="multiwoz979")
+    parser.add_argument("--multiwoz-root", type=Path)
+    parser.add_argument("--dataset", type=Path)
+    parser.add_argument("--retrieval-root", type=Path)
+    parser.add_argument("--phase8-results", type=Path, dest="frozen_results", required=True)
+    parser.add_argument("--reader-protocol-results", type=Path)
+    parser.add_argument("--official-evaluator-root", type=Path)
+    parser.add_argument("--official-python", type=Path)
+    parser.add_argument("--oracle-dataset", type=Path)
+    parser.add_argument("--official-judge-model", default="gpt-4o")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--max-examples", type=int, default=0)
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
+    token = args.token or os.environ.get(args.token_env, "")
+    if not token:
+        parser.error(f"TrustGraph token required via --token or {args.token_env}")
+
     sys.path[:0] = [str(args.asm_root), str(args.asm_root / "src")]
     from asm_memory_bridge import RetrievalCandidate
-    from benchmarks.multiwoz.adapter import load_multiwoz
     from benchmarks.multiwoz.phase8 import evaluate_one, metric_summary
     from benchmarks.multiwoz.phase81 import reader_from_protocol
     from persistent_memory_scaling.trustgraph.client import TrustGraphClient
 
-    phase8 = json.loads(args.phase8_results.read_text(encoding="utf-8"))
-    frozen_ids = [str(value) for value in phase8["protocol"]["evaluation_question_ids"]]
+    instances, reader_protocol = load_instances(
+        args.corpus, asm_root=args.asm_root, frozen_results=args.frozen_results,
+        multiwoz_root=args.multiwoz_root, dataset=args.dataset,
+        retrieval_root=args.retrieval_root,
+    )
     if args.max_examples:
-        frozen_ids = frozen_ids[:args.max_examples]
-    loaded = load_multiwoz(args.multiwoz_root, "test", bundle_size=16,
-                           maximum=int(phase8["protocol"]["source_evaluation_examples"]))
-    by_id = {item.question_id: item for item in loaded}
-    instances = [by_id[value] for value in frozen_ids]
+        instances = instances[:args.max_examples]
+    if args.reader_protocol_results:
+        reader_protocol = json.loads(
+            args.reader_protocol_results.read_text(encoding="utf-8")
+        )["protocol"]
+    if not reader_protocol:
+        parser.error("reader protocol is absent; pass --reader-protocol-results")
     memories = {memory.memory_id: memory for item in instances for memory in item.memories}
     memory_to_uri = {memory_id: entity_uri(memory_id) for memory_id in memories}
     uri_to_memory = {uri: memory_id for memory_id, uri in memory_to_uri.items()}
@@ -88,7 +107,7 @@ def main() -> int:
         for index, signature in enumerate(signatures, 1)
     }
 
-    client = TrustGraphClient(args.url, args.token, flow_id=args.flow, collection=args.collection)
+    client = TrustGraphClient(args.url, token, flow_id=args.flow, collection=args.collection)
     setup_started = perf_counter()
     collections = client.api.collection()
     known_collections = {item.collection for item in collections.list_collections()}
@@ -146,8 +165,8 @@ def main() -> int:
         "timeout_seconds": 180.0, "reader_attempts": 5, "retry_delay_seconds": 1.0,
         "reader_api_key_env": "",
     })()
-    reader = reader_from_protocol(reader_args, phase8["protocol"])
-    top_k = int(phase8["protocol"]["top_k"])
+    reader = reader_from_protocol(reader_args, reader_protocol)
+    top_k = int(reader_protocol["top_k"])
     for index, instance in enumerate(instances, 1):
         if instance.question_id in completed:
             continue
@@ -164,14 +183,14 @@ def main() -> int:
         ) for rank, (memory_id, score) in enumerate(matches, 1))
         row = evaluate_one(
             instance, "trustgraph_graph_embeddings", candidates=candidates, reader=reader,
-            max_context_bytes=int(phase8["protocol"]["max_context_bytes"]),
+            max_context_bytes=int(reader_protocol["max_context_bytes"]),
             retrieval_latency_ms=retrieval_ms,
-            input_price_per_million=float(phase8["protocol"]["input_price_per_million"]),
-            output_price_per_million=float(phase8["protocol"]["output_price_per_million"]),
+            input_price_per_million=float(reader_protocol.get("input_price_per_million", 0.0)),
+            output_price_per_million=float(reader_protocol.get("output_price_per_million", 0.0)),
         )
         rows.append(row)
         partial = {
-            "schema_version": "tg-phase81-paired-v1", "collection": args.collection,
+            "schema_version": "tg-paired-corpus-v1", "corpus": args.corpus, "collection": args.collection,
             "system": "trustgraph_graph_embeddings", "examples_requested": len(instances),
             "unique_memories": len(memories), "bundle_count": len(signatures),
             "candidate_memories_per_question": 16, "setup_seconds": setup_seconds,
@@ -185,15 +204,28 @@ def main() -> int:
               flush=True)
 
     summary = metric_summary(rows)
+    official: dict[str, Any] = {"status": "not_applicable"}
+    if args.corpus == "longmemeval500":
+        required = (args.official_evaluator_root, args.official_python, args.oracle_dataset)
+        if any(value is None for value in required):
+            parser.error("LongMemEval requires official evaluator root, Python, and oracle dataset")
+        from .longmemeval_official import evaluate as evaluate_official
+        official = evaluate_official(
+            rows, system="trustgraph_graph_embeddings_gpt4o", output=args.output,
+            evaluator_root=args.official_evaluator_root,
+            evaluator_python=args.official_python, oracle_dataset=args.oracle_dataset,
+            judge_model=args.official_judge_model,
+        )
     result = {
-        "schema_version": "tg-phase81-paired-v1", "collection": args.collection,
+        "schema_version": "tg-paired-corpus-v1", "corpus": args.corpus, "collection": args.collection,
         "system": "trustgraph_graph_embeddings", "examples_requested": len(instances),
         "unique_memories": len(memories), "bundle_count": len(signatures),
         "candidate_memories_per_question": 16, "setup_seconds": setup_seconds,
         "ingestion_submission_seconds": ingestion_submission_seconds,
         "indexing_readiness_seconds": indexing_readiness_seconds,
         "retrieval_latency_ms_mean_external": mean(row["retrieval_latency_ms"] for row in rows),
-        "summary": summary, "complete": len(rows) == len(instances), "rows": rows,
+        "summary": summary, "official_evaluation": official,
+        "complete": len(rows) == len(instances), "rows": rows,
         "limitations": [
             "Graph-embeddings retrieval is a TrustGraph retrieval ablation, not full GraphRAG synthesis.",
             "MultiWOZ memories were imported as entity contexts to preserve one retrievable ID per dialogue.",

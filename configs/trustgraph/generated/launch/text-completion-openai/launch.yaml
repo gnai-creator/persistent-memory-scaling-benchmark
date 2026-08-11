@@ -1,0 +1,19 @@
+processors:
+  - class: trustgraph.model.text_completion.openai.Processor
+    params:
+      id: text-completion
+      concurrency: 1
+      pubsub_backend: pulsar
+      pulsar_host: pulsar://pulsar:6650
+      model: gpt-4o
+      temperature: 0
+      max_output: 4096
+  - class: trustgraph.model.text_completion.openai.Processor
+    params:
+      id: text-completion-rag
+      concurrency: 1
+      pubsub_backend: pulsar
+      pulsar_host: pulsar://pulsar:6650
+      model: gpt-4o
+      temperature: 0
+      max_output: 4096
