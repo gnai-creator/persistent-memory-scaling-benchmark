@@ -1,0 +1,24 @@
+{
+  "schema_version": "tg2-vram-stack-comparison-v1",
+  "window_seconds": 30,
+  "stack_down": {
+    "gpu_total_mean_bytes": 2374303744,
+    "gpu_total_peak_bytes": 2475687936,
+    "trustgraph_mean_bytes": 0,
+    "asm_mean_bytes": 908066816,
+    "other_mean_bytes": 725352448,
+    "unattributed_mean_bytes": 740884480,
+    "container_ram_mean_bytes": 0
+  },
+  "stack_up_c100k_idle": {
+    "gpu_total_mean_bytes": 2329280512,
+    "gpu_total_peak_bytes": 2381316096,
+    "trustgraph_mean_bytes": 0,
+    "asm_mean_bytes": 908066816,
+    "other_mean_bytes": 681312256,
+    "unattributed_mean_bytes": 739901440,
+    "container_ram_mean_bytes": 4270496808.75,
+    "container_ram_peak_bytes": 4303596026
+  },
+  "interpretation": "Total device VRAM varied because unrelated processes changed. TrustGraph structured path had zero attributable GPU-process memory in both windows; total device VRAM remains reported separately."
+}

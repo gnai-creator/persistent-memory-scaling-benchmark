@@ -1,0 +1,42 @@
+{
+  "central_bytes": 18046935040.0,
+  "is_measurement": false,
+  "measured_points": [
+    {
+      "disk_bytes": 2140842.6666666665,
+      "events": 100,
+      "events_per_second": 11.642057062203696,
+      "query_ms": 41.23958256774738,
+      "ram_bytes": 35429985.0
+    },
+    {
+      "disk_bytes": 19615744.0,
+      "events": 1000,
+      "events_per_second": 82.74663169065612,
+      "query_ms": 41.22133240035813,
+      "ram_bytes": 82707477.33333333
+    },
+    {
+      "disk_bytes": 183089834.66666666,
+      "events": 10000,
+      "events_per_second": 194.8620791208126,
+      "query_ms": 42.1276480666711,
+      "ram_bytes": 300362848.6666667
+    },
+    {
+      "disk_bytes": 1804693504.0,
+      "events": 100000,
+      "events_per_second": 232.57646637383584,
+      "query_ms": 42.11502807884244,
+      "ram_bytes": 7319062.0
+    }
+  ],
+  "method": "largest-checkpoint bytes/event held constant",
+  "rates_bytes_per_event": [
+    18308.983466666665,
+    18046.93504
+  ],
+  "scenario_high_bytes": 18308983466.666664,
+  "scenario_low_bytes": 18046935040.0,
+  "target_events": 1000000
+}
