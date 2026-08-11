@@ -1,0 +1,218 @@
+{
+  "demos": [
+    {
+      "description": "Explore space missions across the solar system.",
+      "globalName": "SolarMissionsPlugin",
+      "icon": "◉",
+      "id": "solar-missions",
+      "paletteKey": "amber",
+      "screenshot": "/plugins/solar-missions.png",
+      "title": "Solar System Missions",
+      "url": "/plugins/solar-missions.iife.js"
+    },
+    {
+      "description": "Hardware decomposition tree with security annotations.",
+      "globalName": "HwSecPlugin",
+      "icon": "◈",
+      "id": "hwsec",
+      "paletteKey": "blue",
+      "title": "Hardware Security Explorer",
+      "url": "/plugins/hwsec.iife.js"
+    },
+    {
+      "description": "Experimental sandbox for trying things out.",
+      "globalName": "PlaygroundPlugin",
+      "icon": "△",
+      "id": "playground",
+      "paletteKey": "rose",
+      "title": "Playground",
+      "url": "/plugins/playground.iife.js"
+    },
+    {
+      "description": "Geo-temporal event explorer with map, timeline, and filters.",
+      "globalName": "WorldEventsPlugin",
+      "icon": "⊕",
+      "id": "world-events",
+      "paletteKey": "cyan",
+      "title": "World Events Explorer",
+      "url": "/plugins/world-events.iife.js"
+    },
+    {
+      "componentName": "RetailAssistant",
+      "description": "AI shopping assistant for PC builds, gifts, and camping gear.",
+      "globalName": "RetailBrandPlugin",
+      "icon": "◈",
+      "id": "retail-assistant",
+      "paletteKey": "emerald",
+      "title": "Retail Shopping Assistant",
+      "url": "/plugins/retail-brand.iife.js"
+    },
+    {
+      "componentName": "BrandAnalytics",
+      "description": "Brand intelligence from interaction signals. See what users buy, reject, and why.",
+      "globalName": "RetailBrandPlugin",
+      "icon": "◎",
+      "id": "brand-analytics",
+      "paletteKey": "purple",
+      "title": "Brand Analytics",
+      "url": "/plugins/retail-brand.iife.js"
+    },
+    {
+      "description": "Enterprise risk explorer with time-windowed event analysis, threat actors, assets, and incident response tracking.",
+      "globalName": "RiskPlugin",
+      "icon": "🛡",
+      "id": "risk",
+      "paletteKey": "rose",
+      "title": "Risk Management",
+      "url": "/plugins/risk.iife.js"
+    },
+    {
+      "description": "Interactive game tree visualizer with payoff matrices, backward induction, Nash equilibria, and what-if sandbox.",
+      "globalName": "GameTheoryPlugin",
+      "icon": "♟",
+      "id": "game-theory",
+      "paletteKey": "purple",
+      "screenshot": "/plugins/game-theory.png",
+      "title": "Game Theory",
+      "url": "/plugins/game-theory.iife.js"
+    },
+    {
+      "description": "Innovation ecosystem explorer for navigating organisations, capabilities, procurement routes, and people.",
+      "globalName": "InnovationPlugin",
+      "icon": "🔍",
+      "id": "innovation",
+      "paletteKey": "cyan",
+      "title": "Innovation Intelligence",
+      "url": "/plugins/innovation.iife.js"
+    },
+    {
+      "description": "Multilingual legal explorer: institutions, civic rights, compliance obligations, emergency powers, and legislative structure.",
+      "globalName": "LawPlugin",
+      "icon": "⚖",
+      "id": "law-in-context",
+      "paletteKey": "amber",
+      "title": "Law in Context",
+      "url": "/plugins/law.iife.js"
+    },
+    {
+      "description": "Cybersecurity investigation tool: pivot through risk events, actors, assets, and categories. Drill into raw OCSF events for evidence.",
+      "globalName": "ThreatPlugin",
+      "icon": "⚠",
+      "id": "threat-explorer",
+      "paletteKey": "cyan",
+      "title": "Threat Explorer",
+      "url": "/plugins/threat.iife.js"
+    }
+  ],
+  "workflows": [
+    {
+      "description": "Load documents and process them into knowledge.",
+      "icon": "⬆",
+      "id": "ingest",
+      "paletteKey": "amber",
+      "screenshot": "/doc-ingest.jpg",
+      "title": "Document Ingestion"
+    },
+    {
+      "description": "Explore the context graph visually.",
+      "icon": "◈",
+      "id": "explore",
+      "paletteKey": "emerald",
+      "screenshot": "/ctxt-graph.jpg",
+      "title": "Context Graph Explorer"
+    },
+    {
+      "description": "Ask questions with knowledge graph provenance.",
+      "icon": "◉",
+      "id": "graph-rag",
+      "paletteKey": "blue",
+      "screenshot": "/graph-rag.jpg",
+      "title": "Graph RAG Query"
+    },
+    {
+      "description": "Multi-step reasoning agent with provenance.",
+      "icon": "⚡",
+      "id": "agent",
+      "paletteKey": "amber",
+      "screenshot": "/agent-retrieval.jpg",
+      "title": "Agent Query"
+    },
+    {
+      "description": "Semantic document search with grounded answers.",
+      "icon": "◉",
+      "id": "doc-rag",
+      "paletteKey": "purple",
+      "screenshot": "/doc-rag.jpg",
+      "title": "Document RAG Query"
+    },
+    {
+      "description": "Explore any graph — no schema required.",
+      "icon": "◎",
+      "id": "raw-graph",
+      "paletteKey": "cyan",
+      "screenshot": "/ss-raw-graph.png",
+      "title": "Graph Navigator"
+    },
+    {
+      "description": "Browse, edit, and test LLM prompt templates.",
+      "icon": "✎",
+      "id": "prompts",
+      "paletteKey": "amber",
+      "screenshot": "/prompts.jpg",
+      "title": "Prompt Management"
+    },
+    {
+      "description": "Configure agent patterns, task types, and tools.",
+      "icon": "⚙",
+      "id": "agent-config",
+      "paletteKey": "cyan",
+      "screenshot": "/agent.jpg",
+      "title": "Agent Console"
+    },
+    {
+      "description": "Search structured data across schemas.",
+      "icon": "▤",
+      "id": "data",
+      "paletteKey": "blue",
+      "screenshot": "/ss-data.png",
+      "title": "Table Explorer"
+    },
+    {
+      "description": "Browse classes, properties, and relationships.",
+      "icon": "◇",
+      "id": "ontology",
+      "paletteKey": "purple",
+      "title": "Ontology Viewer"
+    },
+    {
+      "description": "Create, edit, validate, and export OWL ontologies.",
+      "icon": "◆",
+      "id": "ontology-manage",
+      "paletteKey": "emerald",
+      "screenshot": "/ontology.jpg",
+      "title": "Ontology Management"
+    },
+    {
+      "description": "Define and manage structured data schemas.",
+      "icon": "▦",
+      "id": "schemas",
+      "paletteKey": "blue",
+      "screenshot": "/schema.jpg",
+      "title": "Schema Management"
+    },
+    {
+      "description": "Execute SPARQL queries against the knowledge graph.",
+      "icon": "⟐",
+      "id": "sparql",
+      "paletteKey": "purple",
+      "title": "SPARQL Query"
+    },
+    {
+      "description": "Execute GraphQL queries against structured data.",
+      "icon": "⬡",
+      "id": "graphql",
+      "paletteKey": "cyan",
+      "title": "GraphQL Query"
+    }
+  ]
+}

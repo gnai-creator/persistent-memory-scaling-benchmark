@@ -1,0 +1,49 @@
+"processors":
+- "class": "trustgraph.query.doc_embeddings.qdrant.Processor"
+  "params":
+    "concurrency": 1
+    "id": "doc-embeddings-query"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "store_uri": "http://qdrant:6333"
+- "class": "trustgraph.storage.doc_embeddings.qdrant.Processor"
+  "params":
+    "concurrency": 1
+    "id": "doc-embeddings-write"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "qdrant_replication_factor": 1
+    "qdrant_shard_number": 1
+    "store_uri": "http://qdrant:6333"
+- "class": "trustgraph.query.graph_embeddings.qdrant.Processor"
+  "params":
+    "concurrency": 1
+    "id": "graph-embeddings-query"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "store_uri": "http://qdrant:6333"
+- "class": "trustgraph.storage.graph_embeddings.qdrant.Processor"
+  "params":
+    "concurrency": 1
+    "id": "graph-embeddings-write"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "qdrant_replication_factor": 1
+    "qdrant_shard_number": 1
+    "store_uri": "http://qdrant:6333"
+- "class": "trustgraph.query.row_embeddings.qdrant.Processor"
+  "params":
+    "concurrency": 1
+    "id": "row-embeddings-query"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "store_uri": "http://qdrant:6333"
+- "class": "trustgraph.storage.row_embeddings.qdrant.Processor"
+  "params":
+    "concurrency": 1
+    "id": "row-embeddings-write"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "qdrant_replication_factor": 1
+    "qdrant_shard_number": 1
+    "store_uri": "http://qdrant:6333"

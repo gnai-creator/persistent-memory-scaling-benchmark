@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aletheion.ai/schemas/pmsb/tg-metrics-window-v1.json",
+  "title": "PMSB TrustGraph sampled metrics window v1",
+  "type": "object",
+  "required": ["schema_version", "window_id", "phase", "started_at", "duration_requested_seconds", "duration_observed_seconds", "interval_seconds", "sample_count", "samples", "summary"],
+  "properties": {
+    "schema_version": {"const": "tg-metrics-window-v1"},
+    "window_id": {"type": "string", "minLength": 1},
+    "phase": {"type": "string", "minLength": 1},
+    "started_at": {"type": "string", "format": "date-time"},
+    "duration_requested_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "duration_observed_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "interval_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "sample_count": {"type": "integer", "minimum": 1},
+    "samples": {"type": "array", "minItems": 1},
+    "summary": {"type": "object"}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "tg-deployment-selection-v1",
+  "generated_at": "2026-08-11T04:25:00Z",
+  "generator": "@trustgraph/config@1.0.1",
+  "product_line": "2.8",
+  "platform": "docker-compose",
+  "components": [
+    {"name": "trustgraph-base", "parameters": {}},
+    {"name": "triple-store-cassandra", "parameters": {}},
+    {"name": "row-store-cassandra", "parameters": {}},
+    {"name": "vector-store-qdrant", "parameters": {}},
+    {"name": "pulsar", "parameters": {}},
+    {"name": "grafana", "parameters": {}},
+    {"name": "cassandra", "parameters": {}},
+    {"name": "garage", "parameters": {}},
+    {"name": "ollama", "parameters": {"max-output-tokens": 4096}},
+    {"name": "embeddings-fastembed", "parameters": {}}
+  ],
+  "generated_package_sha256": "1346538e6d73c6689f86aa5729fd531a86e1ed20044da210793b0ba59020929d"
+}

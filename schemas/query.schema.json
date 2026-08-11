@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aletheion.ai/schemas/pmsb/tg-query-v1.json",
+  "title": "PMSB TrustGraph query v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "query_id", "namespace", "language", "question", "query_type", "expected_answer", "relevant_evidence_ids", "should_abstain"],
+  "properties": {
+    "schema_version": {"const": "tg-query-v1"},
+    "query_id": {"type": "string", "minLength": 1},
+    "namespace": {"type": "string", "minLength": 1},
+    "language": {"enum": ["en", "pt-BR"]},
+    "question": {"type": "string", "minLength": 1},
+    "query_type": {"type": "string", "minLength": 1},
+    "expected_answer": {"type": "string"},
+    "relevant_evidence_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "should_abstain": {"type": "boolean"}
+  }
+}

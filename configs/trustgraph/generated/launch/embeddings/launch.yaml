@@ -1,0 +1,28 @@
+"processors":
+- "class": "trustgraph.embeddings.fastembed.Processor"
+  "params":
+    "concurrency": 1
+    "id": "embeddings"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.embeddings.document_embeddings.Processor"
+  "params":
+    "id": "document-embeddings"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.embeddings.graph_embeddings.Processor"
+  "params":
+    "id": "graph-embeddings"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.embeddings.row_embeddings.Processor"
+  "params":
+    "id": "row-embeddings"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.reranker.flashrank.Processor"
+  "params":
+    "concurrency": 1
+    "id": "reranker"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"

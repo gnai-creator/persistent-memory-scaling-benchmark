@@ -1,0 +1,36 @@
+"processors":
+- "class": "trustgraph.chunking.recursive.Processor"
+  "params":
+    "id": "chunker"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.extract.kg.definitions.Processor"
+  "params":
+    "concurrency": 1
+    "id": "kg-extract-definitions"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.extract.kg.ontology.Processor"
+  "params":
+    "concurrency": 1
+    "id": "kg-extract-ontology"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.extract.kg.relationships.Processor"
+  "params":
+    "concurrency": 1
+    "id": "kg-extract-relationships"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.extract.kg.rows.Processor"
+  "params":
+    "concurrency": 1
+    "id": "kg-extract-rows"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.prompt.template.Processor"
+  "params":
+    "concurrency": 1
+    "id": "prompt"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"

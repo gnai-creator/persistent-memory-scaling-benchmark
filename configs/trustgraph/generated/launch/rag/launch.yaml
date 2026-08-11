@@ -1,0 +1,63 @@
+"processors":
+- "class": "trustgraph.agent.orchestrator.Processor"
+  "params":
+    "concurrency": 1
+    "id": "agent-manager"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.retrieval.graph_rag.Processor"
+  "params":
+    "concurrency": 1
+    "edge_limit": 30
+    "edge_score_limit": 10
+    "entity_limit": 50
+    "id": "graph-rag"
+    "max_path_length": 2
+    "max_subgraph_size": 100
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "triple_limit": 30
+- "class": "trustgraph.retrieval.document_rag.Processor"
+  "params":
+    "concurrency": 1
+    "doc_limit": 20
+    "id": "document-rag"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+    "retrieval_mode": "vector"
+- "class": "trustgraph.retrieval.nlp_query.Processor"
+  "params":
+    "concurrency": 1
+    "id": "nlp-query"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.retrieval.structured_query.Processor"
+  "params":
+    "concurrency": 1
+    "id": "structured-query"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.retrieval.structured_diag.Processor"
+  "params":
+    "concurrency": 1
+    "id": "structured-diag"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.query.sparql.Processor"
+  "params":
+    "concurrency": 1
+    "id": "sparql-query"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.prompt.template.Processor"
+  "params":
+    "concurrency": 1
+    "id": "prompt-rag"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.agent.mcp_tool.Service"
+  "params":
+    "concurrency": 1
+    "id": "mcp-tool"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"

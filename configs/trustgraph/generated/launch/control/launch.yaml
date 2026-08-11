@@ -1,0 +1,84 @@
+"processors":
+- "class": "trustgraph.librarian.Processor"
+  "params":
+    "cassandra_replication_factor": 1
+    "id": "librarian"
+    "object_store_access_key": "GK000000000000000000000001"
+    "object_store_endpoint": "garage:3900"
+    "object_store_region": "garage"
+    "object_store_secret_key": "b171f00be9be4c32c734f4c05fe64c527a8ab5eb823b376cfa8c2531f70fc427"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.config.service.Processor"
+  "params":
+    "cassandra_replication_factor": 1
+    "id": "config-svc"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.flow.service.Processor"
+  "params":
+    "id": "flow-svc"
+    "pubsub_backend": "pulsar"
+    "pulsar_admin_url": "http://pulsar:8080"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.cores.service.Processor"
+  "params":
+    "cassandra_replication_factor": 1
+    "id": "knowledge"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.storage.knowledge.store.Processor"
+  "params":
+    "cassandra_replication_factor": 1
+    "id": "kg-store"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.metering.Processor"
+  "params":
+    "id": "metering"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.metering.Processor"
+  "params":
+    "id": "metering-rag"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.iam.service.Processor"
+  "params":
+    "bootstrap_mode": "token"
+    "cassandra_replication_factor": 1
+    "id": "iam-svc"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.bootstrap.bootstrapper.Processor"
+  "params":
+    "id": "bootstrap"
+    "initialisers":
+    - "class": "trustgraph.bootstrap.initialisers.PulsarTopology"
+      "flag": "v1"
+      "name": "pulsar-topology"
+      "params":
+        "admin_url": "http://pulsar:8080"
+    - "class": "trustgraph.bootstrap.initialisers.TemplateSeed"
+      "flag": "v1"
+      "name": "template-seed"
+      "params":
+        "config_file": "/etc/trustgraph/template/config.json"
+        "overwrite": false
+    - "class": "trustgraph.bootstrap.initialisers.WorkspaceInit"
+      "flag": "v1"
+      "name": "default-workspace"
+      "params":
+        "overwrite": false
+        "source": "template"
+        "workspace": "default"
+    - "class": "trustgraph.bootstrap.initialisers.DefaultFlowStart"
+      "flag": "v1"
+      "name": "default-flow"
+      "params":
+        "blueprint": "everything"
+        "description": "Default"
+        "flow_id": "default"
+        "workspace": "default"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"

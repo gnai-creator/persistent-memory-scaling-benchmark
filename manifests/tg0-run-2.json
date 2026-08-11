@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "result": "results/raw/tg0-run-2.json",
+    "workload": "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/workloads/synthetic/tg0-smoke.json"
+  },
+  "collection": "tg0-smoke",
+  "created_at": "2026-08-11T04:48:50.806862+00:00",
+  "deployment": {
+    "compose_sha256": "69530db07dd3b604a309e388d17ef509b5b14005cffe7c26b19d3f3bbd68abb0",
+    "trustgraph_image_version": "2.8.12"
+  },
+  "event_count": 100,
+  "flow_id": "tg0-smoke",
+  "hardware": {
+    "preflight": "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/manifests/tg0-preflight.json"
+  },
+  "models": {
+    "embeddings": "sentence-transformers/all-MiniLM-L6-v2",
+    "llm": "qwen2.5:0.5b",
+    "reranker": "ms-marco-MiniLM-L-12-v2"
+  },
+  "phase": "TG-0",
+  "query_count": 10,
+  "run_id": "tg0-run-2",
+  "schema_version": "tg-run-manifest-v1",
+  "seed": 20260811,
+  "status": "completed",
+  "upstream": {
+    "commit": "0bcfe9377c3d55b7199c16335b9e52ed91286233",
+    "repository": "https://github.com/trustgraph-ai/trustgraph.git"
+  },
+  "workspace": "default"
+}

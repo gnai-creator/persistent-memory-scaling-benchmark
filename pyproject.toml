@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "persistent-memory-scaling-benchmark"
+version = "0.1.0"
+description = "Reproducible scaling benchmark for persistent AI memory systems"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+trustgraph = ["trustgraph-base>=2.8,<2.9", "aiohttp>=3.10,<4"]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+pmsb-tg0 = "persistent_memory_scaling.trustgraph.cli:main"
+pmsb-tg1 = "persistent_memory_scaling.trustgraph.metrics_cli:main"
+pmsb-tg1-run = "persistent_memory_scaling.trustgraph.tg1_runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

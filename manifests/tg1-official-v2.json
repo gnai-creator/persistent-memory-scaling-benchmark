@@ -1,0 +1,41 @@
+{
+  "schema_version": "tg1-official-summary-v1",
+  "date": "2026-08-11",
+  "status": "passed",
+  "run_ids": [
+    "tg1-official-v2-r1",
+    "tg1-official-v2-r2",
+    "tg1-official-v2-r3"
+  ],
+  "parameters": {
+    "events": 100,
+    "repetitions": 3,
+    "stabilization_seconds": 60,
+    "quiescence_observation_seconds": 15,
+    "empty_control_seconds": 30,
+    "loaded_window_seconds": 30,
+    "query_window_seconds": 10,
+    "max_empty_control_disk_bytes": 8388608
+  },
+  "matched_results": {
+    "container_memory_bytes": {
+      "observations": [466756830, 460965543, 457007173],
+      "mean": 461576515.3333333,
+      "ci95_low": 449394662.7261916,
+      "ci95_high": 473758367.94047505
+    },
+    "volume_physical_bytes": {
+      "observations": [5423104, 5423104, 5414912],
+      "mean": 5420373.333333333,
+      "ci95_low": 5408623.274666666,
+      "ci95_high": 5432123.392
+    }
+  },
+  "vram": {
+    "trustgraph_peak_bytes_all_official_windows": 0,
+    "asm_mean_bytes_all_official_windows": 908066816,
+    "asm_control_policy": "read-only external attribution; never stop, restart, limit or modify"
+  },
+  "raw_aggregate": "results/raw/tg1-official-v2-aggregate.json",
+  "report": "docs/report/004_tg1_official.md"
+}

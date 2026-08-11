@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aletheion.ai/schemas/pmsb/tg-metrics-delta-v1.json",
+  "title": "PMSB TrustGraph metrics delta v1",
+  "type": "object",
+  "required": ["schema_version", "before", "after", "event_delta", "totals", "per_event"],
+  "properties": {
+    "schema_version": {"const": "tg-metrics-delta-v1"},
+    "before": {"type": "string"},
+    "after": {"type": "string"},
+    "event_delta": {"type": "integer", "minimum": 1},
+    "totals": {"type": "object"},
+    "per_event": {"type": "object"}
+  }
+}

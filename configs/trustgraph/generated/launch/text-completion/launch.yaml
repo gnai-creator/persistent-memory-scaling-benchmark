@@ -1,0 +1,13 @@
+"processors":
+- "class": "trustgraph.model.text_completion.ollama.Processor"
+  "params":
+    "concurrency": 1
+    "id": "text-completion"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.model.text_completion.ollama.Processor"
+  "params":
+    "concurrency": 1
+    "id": "text-completion-rag"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"

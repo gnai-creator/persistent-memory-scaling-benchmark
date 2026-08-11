@@ -1,0 +1,32 @@
+{
+  "schema_version": "tg1-run-manifest-v1",
+  "run_id": "tg1-calibration-100",
+  "created_at": "2026-08-11T05:12:00Z",
+  "phase": "TG-1",
+  "status": "calibration-completed",
+  "event_count": 100,
+  "workspace": "default",
+  "collection": "tg0-smoke",
+  "flow_id": "tg0-smoke",
+  "measurement_semantics": {
+    "container_memory_bytes": "instantaneous aggregate Docker working-set/RSS proxy; not logical retained state",
+    "volume_physical_bytes": "allocated bytes from BusyBox du -sk over read-only Docker volume mounts",
+    "backend_logical": "diagnostic only; never summed with physical volume bytes",
+    "gpu": "whole-device instantaneous nvidia-smi reading; process attribution pending"
+  },
+  "artifacts": {
+    "empty": "results/raw/tg1-empty.json",
+    "post_ingest_idle": "results/raw/tg1-post-ingest-idle.json",
+    "query_active": "results/raw/tg1-query-active.json",
+    "post_query_idle": "results/raw/tg1-post-query-idle.json",
+    "ingest_delta": "results/raw/tg1-ingest-delta.json",
+    "query_growth": "results/raw/tg1-query-growth-normalized.json"
+  },
+  "limitations": [
+    "single calibration run; no confidence interval",
+    "GraphRAG request did not finish within the harness session",
+    "GPU baseline and post-ingest differ because Ollama was started after the empty snapshot",
+    "nodetool tablestats failed because the generated Cassandra JVM sets an invalid initial/max heap combination; cqlsh system_schema fallback captured",
+    "BookKeeper, Prometheus and Loki growth includes elapsed-time operational traffic and is not attributable solely to events"
+  ]
+}

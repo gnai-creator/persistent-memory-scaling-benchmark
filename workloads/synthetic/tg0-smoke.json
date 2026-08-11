@@ -1,0 +1,4539 @@
+{
+  "events": [
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-000 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:000"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-000",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-000"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 0,
+      "text": "Person-000 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-000-label",
+          "o": "Person-000",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:000"
+        },
+        {
+          "evidence_id": "tg0-evidence-000",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:000"
+        },
+        {
+          "evidence_id": "tg0-evidence-000-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-001 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:001"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-001",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-001"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 1,
+      "text": "Person-001 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-001-label",
+          "o": "Person-001",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:001"
+        },
+        {
+          "evidence_id": "tg0-evidence-001",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:001"
+        },
+        {
+          "evidence_id": "tg0-evidence-001-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-002 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:002"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-002",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-002"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 2,
+      "text": "Person-002 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-002-label",
+          "o": "Person-002",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:002"
+        },
+        {
+          "evidence_id": "tg0-evidence-002",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:002"
+        },
+        {
+          "evidence_id": "tg0-evidence-002-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-003 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:003"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-003",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-003"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 3,
+      "text": "Person-003 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-003-label",
+          "o": "Person-003",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:003"
+        },
+        {
+          "evidence_id": "tg0-evidence-003",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:003"
+        },
+        {
+          "evidence_id": "tg0-evidence-003-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-004 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:004"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-004",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-004"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 4,
+      "text": "Person-004 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-004-label",
+          "o": "Person-004",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:004"
+        },
+        {
+          "evidence_id": "tg0-evidence-004",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:004"
+        },
+        {
+          "evidence_id": "tg0-evidence-004-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-005 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:005"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-005",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-005"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 5,
+      "text": "Person-005 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-005-label",
+          "o": "Person-005",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:005"
+        },
+        {
+          "evidence_id": "tg0-evidence-005",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:005"
+        },
+        {
+          "evidence_id": "tg0-evidence-005-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-006 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:006"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-006",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-006"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 6,
+      "text": "Person-006 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-006-label",
+          "o": "Person-006",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:006"
+        },
+        {
+          "evidence_id": "tg0-evidence-006",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:006"
+        },
+        {
+          "evidence_id": "tg0-evidence-006-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-007 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:007"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-007",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-007"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 7,
+      "text": "Person-007 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-007-label",
+          "o": "Person-007",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:007"
+        },
+        {
+          "evidence_id": "tg0-evidence-007",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:007"
+        },
+        {
+          "evidence_id": "tg0-evidence-007-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-008 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:008"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-008",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-008"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 8,
+      "text": "Person-008 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-008-label",
+          "o": "Person-008",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:008"
+        },
+        {
+          "evidence_id": "tg0-evidence-008",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:008"
+        },
+        {
+          "evidence_id": "tg0-evidence-008-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-009 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:009"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-009",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-009"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 9,
+      "text": "Person-009 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-009-label",
+          "o": "Person-009",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:009"
+        },
+        {
+          "evidence_id": "tg0-evidence-009",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:009"
+        },
+        {
+          "evidence_id": "tg0-evidence-009-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-010 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:010"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-010",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-010"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 10,
+      "text": "Person-010 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-010-label",
+          "o": "Person-010",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:010"
+        },
+        {
+          "evidence_id": "tg0-evidence-010",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:010"
+        },
+        {
+          "evidence_id": "tg0-evidence-010-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-011 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:011"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-011",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-011"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 11,
+      "text": "Person-011 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-011-label",
+          "o": "Person-011",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:011"
+        },
+        {
+          "evidence_id": "tg0-evidence-011",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:011"
+        },
+        {
+          "evidence_id": "tg0-evidence-011-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-012 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:012"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-012",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-012"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 12,
+      "text": "Person-012 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-012-label",
+          "o": "Person-012",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:012"
+        },
+        {
+          "evidence_id": "tg0-evidence-012",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:012"
+        },
+        {
+          "evidence_id": "tg0-evidence-012-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-013 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:013"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-013",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-013"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 13,
+      "text": "Person-013 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-013-label",
+          "o": "Person-013",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:013"
+        },
+        {
+          "evidence_id": "tg0-evidence-013",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:013"
+        },
+        {
+          "evidence_id": "tg0-evidence-013-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-014 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:014"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-014",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-014"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 14,
+      "text": "Person-014 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-014-label",
+          "o": "Person-014",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:014"
+        },
+        {
+          "evidence_id": "tg0-evidence-014",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:014"
+        },
+        {
+          "evidence_id": "tg0-evidence-014-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-015 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:015"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-015",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-015"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 15,
+      "text": "Person-015 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-015-label",
+          "o": "Person-015",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:015"
+        },
+        {
+          "evidence_id": "tg0-evidence-015",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:015"
+        },
+        {
+          "evidence_id": "tg0-evidence-015-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-016 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:016"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-016",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-016"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 16,
+      "text": "Person-016 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-016-label",
+          "o": "Person-016",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:016"
+        },
+        {
+          "evidence_id": "tg0-evidence-016",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:016"
+        },
+        {
+          "evidence_id": "tg0-evidence-016-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-017 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:017"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-017",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-017"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 17,
+      "text": "Person-017 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-017-label",
+          "o": "Person-017",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:017"
+        },
+        {
+          "evidence_id": "tg0-evidence-017",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:017"
+        },
+        {
+          "evidence_id": "tg0-evidence-017-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-018 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:018"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-018",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-018"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 18,
+      "text": "Person-018 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-018-label",
+          "o": "Person-018",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:018"
+        },
+        {
+          "evidence_id": "tg0-evidence-018",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:018"
+        },
+        {
+          "evidence_id": "tg0-evidence-018-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-019 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:019"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-019",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-019"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 19,
+      "text": "Person-019 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-019-label",
+          "o": "Person-019",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:019"
+        },
+        {
+          "evidence_id": "tg0-evidence-019",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:019"
+        },
+        {
+          "evidence_id": "tg0-evidence-019-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-020 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:020"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-020",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-020"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 20,
+      "text": "Person-020 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-020-label",
+          "o": "Person-020",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:020"
+        },
+        {
+          "evidence_id": "tg0-evidence-020",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:020"
+        },
+        {
+          "evidence_id": "tg0-evidence-020-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-021 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:021"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-021",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-021"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 21,
+      "text": "Person-021 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-021-label",
+          "o": "Person-021",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:021"
+        },
+        {
+          "evidence_id": "tg0-evidence-021",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:021"
+        },
+        {
+          "evidence_id": "tg0-evidence-021-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-022 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:022"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-022",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-022"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 22,
+      "text": "Person-022 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-022-label",
+          "o": "Person-022",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:022"
+        },
+        {
+          "evidence_id": "tg0-evidence-022",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:022"
+        },
+        {
+          "evidence_id": "tg0-evidence-022-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-023 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:023"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-023",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-023"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 23,
+      "text": "Person-023 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-023-label",
+          "o": "Person-023",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:023"
+        },
+        {
+          "evidence_id": "tg0-evidence-023",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:023"
+        },
+        {
+          "evidence_id": "tg0-evidence-023-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-024 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:024"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-024",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-024"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 24,
+      "text": "Person-024 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-024-label",
+          "o": "Person-024",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:024"
+        },
+        {
+          "evidence_id": "tg0-evidence-024",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:024"
+        },
+        {
+          "evidence_id": "tg0-evidence-024-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-025 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:025"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-025",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-025"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 25,
+      "text": "Person-025 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-025-label",
+          "o": "Person-025",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:025"
+        },
+        {
+          "evidence_id": "tg0-evidence-025",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:025"
+        },
+        {
+          "evidence_id": "tg0-evidence-025-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-026 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:026"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-026",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-026"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 26,
+      "text": "Person-026 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-026-label",
+          "o": "Person-026",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:026"
+        },
+        {
+          "evidence_id": "tg0-evidence-026",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:026"
+        },
+        {
+          "evidence_id": "tg0-evidence-026-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-027 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:027"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-027",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-027"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 27,
+      "text": "Person-027 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-027-label",
+          "o": "Person-027",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:027"
+        },
+        {
+          "evidence_id": "tg0-evidence-027",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:027"
+        },
+        {
+          "evidence_id": "tg0-evidence-027-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-028 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:028"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-028",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-028"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 28,
+      "text": "Person-028 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-028-label",
+          "o": "Person-028",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:028"
+        },
+        {
+          "evidence_id": "tg0-evidence-028",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:028"
+        },
+        {
+          "evidence_id": "tg0-evidence-028-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-029 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:029"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-029",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-029"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 29,
+      "text": "Person-029 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-029-label",
+          "o": "Person-029",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:029"
+        },
+        {
+          "evidence_id": "tg0-evidence-029",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:029"
+        },
+        {
+          "evidence_id": "tg0-evidence-029-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-030 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:030"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-030",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-030"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 30,
+      "text": "Person-030 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-030-label",
+          "o": "Person-030",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:030"
+        },
+        {
+          "evidence_id": "tg0-evidence-030",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:030"
+        },
+        {
+          "evidence_id": "tg0-evidence-030-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-031 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:031"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-031",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-031"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 31,
+      "text": "Person-031 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-031-label",
+          "o": "Person-031",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:031"
+        },
+        {
+          "evidence_id": "tg0-evidence-031",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:031"
+        },
+        {
+          "evidence_id": "tg0-evidence-031-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-032 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:032"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-032",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-032"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 32,
+      "text": "Person-032 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-032-label",
+          "o": "Person-032",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:032"
+        },
+        {
+          "evidence_id": "tg0-evidence-032",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:032"
+        },
+        {
+          "evidence_id": "tg0-evidence-032-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-033 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:033"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-033",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-033"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 33,
+      "text": "Person-033 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-033-label",
+          "o": "Person-033",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:033"
+        },
+        {
+          "evidence_id": "tg0-evidence-033",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:033"
+        },
+        {
+          "evidence_id": "tg0-evidence-033-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-034 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:034"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-034",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-034"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 34,
+      "text": "Person-034 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-034-label",
+          "o": "Person-034",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:034"
+        },
+        {
+          "evidence_id": "tg0-evidence-034",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:034"
+        },
+        {
+          "evidence_id": "tg0-evidence-034-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-035 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:035"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-035",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-035"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 35,
+      "text": "Person-035 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-035-label",
+          "o": "Person-035",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:035"
+        },
+        {
+          "evidence_id": "tg0-evidence-035",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:035"
+        },
+        {
+          "evidence_id": "tg0-evidence-035-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-036 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:036"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-036",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-036"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 36,
+      "text": "Person-036 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-036-label",
+          "o": "Person-036",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:036"
+        },
+        {
+          "evidence_id": "tg0-evidence-036",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:036"
+        },
+        {
+          "evidence_id": "tg0-evidence-036-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-037 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:037"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-037",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-037"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 37,
+      "text": "Person-037 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-037-label",
+          "o": "Person-037",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:037"
+        },
+        {
+          "evidence_id": "tg0-evidence-037",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:037"
+        },
+        {
+          "evidence_id": "tg0-evidence-037-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-038 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:038"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-038",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-038"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 38,
+      "text": "Person-038 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-038-label",
+          "o": "Person-038",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:038"
+        },
+        {
+          "evidence_id": "tg0-evidence-038",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:038"
+        },
+        {
+          "evidence_id": "tg0-evidence-038-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-039 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:039"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-039",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-039"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 39,
+      "text": "Person-039 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-039-label",
+          "o": "Person-039",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:039"
+        },
+        {
+          "evidence_id": "tg0-evidence-039",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:039"
+        },
+        {
+          "evidence_id": "tg0-evidence-039-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-040 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:040"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-040",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-040"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 40,
+      "text": "Person-040 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-040-label",
+          "o": "Person-040",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:040"
+        },
+        {
+          "evidence_id": "tg0-evidence-040",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:040"
+        },
+        {
+          "evidence_id": "tg0-evidence-040-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-041 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:041"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-041",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-041"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 41,
+      "text": "Person-041 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-041-label",
+          "o": "Person-041",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:041"
+        },
+        {
+          "evidence_id": "tg0-evidence-041",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:041"
+        },
+        {
+          "evidence_id": "tg0-evidence-041-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-042 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:042"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-042",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-042"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 42,
+      "text": "Person-042 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-042-label",
+          "o": "Person-042",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:042"
+        },
+        {
+          "evidence_id": "tg0-evidence-042",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:042"
+        },
+        {
+          "evidence_id": "tg0-evidence-042-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-043 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:043"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-043",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-043"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 43,
+      "text": "Person-043 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-043-label",
+          "o": "Person-043",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:043"
+        },
+        {
+          "evidence_id": "tg0-evidence-043",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:043"
+        },
+        {
+          "evidence_id": "tg0-evidence-043-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-044 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:044"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-044",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-044"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 44,
+      "text": "Person-044 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-044-label",
+          "o": "Person-044",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:044"
+        },
+        {
+          "evidence_id": "tg0-evidence-044",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:044"
+        },
+        {
+          "evidence_id": "tg0-evidence-044-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-045 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:045"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-045",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-045"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 45,
+      "text": "Person-045 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-045-label",
+          "o": "Person-045",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:045"
+        },
+        {
+          "evidence_id": "tg0-evidence-045",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:045"
+        },
+        {
+          "evidence_id": "tg0-evidence-045-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-046 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:046"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-046",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-046"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 46,
+      "text": "Person-046 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-046-label",
+          "o": "Person-046",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:046"
+        },
+        {
+          "evidence_id": "tg0-evidence-046",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:046"
+        },
+        {
+          "evidence_id": "tg0-evidence-046-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-047 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:047"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-047",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-047"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 47,
+      "text": "Person-047 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-047-label",
+          "o": "Person-047",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:047"
+        },
+        {
+          "evidence_id": "tg0-evidence-047",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:047"
+        },
+        {
+          "evidence_id": "tg0-evidence-047-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-048 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:048"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-048",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-048"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 48,
+      "text": "Person-048 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-048-label",
+          "o": "Person-048",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:048"
+        },
+        {
+          "evidence_id": "tg0-evidence-048",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:048"
+        },
+        {
+          "evidence_id": "tg0-evidence-048-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-049 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:049"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-049",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-049"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 49,
+      "text": "Person-049 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-049-label",
+          "o": "Person-049",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:049"
+        },
+        {
+          "evidence_id": "tg0-evidence-049",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:049"
+        },
+        {
+          "evidence_id": "tg0-evidence-049-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-050 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:050"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-050",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-050"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 50,
+      "text": "Person-050 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-050-label",
+          "o": "Person-050",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:050"
+        },
+        {
+          "evidence_id": "tg0-evidence-050",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:050"
+        },
+        {
+          "evidence_id": "tg0-evidence-050-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-051 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:051"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-051",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-051"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 51,
+      "text": "Person-051 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-051-label",
+          "o": "Person-051",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:051"
+        },
+        {
+          "evidence_id": "tg0-evidence-051",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:051"
+        },
+        {
+          "evidence_id": "tg0-evidence-051-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-052 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:052"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-052",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-052"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 52,
+      "text": "Person-052 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-052-label",
+          "o": "Person-052",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:052"
+        },
+        {
+          "evidence_id": "tg0-evidence-052",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:052"
+        },
+        {
+          "evidence_id": "tg0-evidence-052-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-053 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:053"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-053",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-053"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 53,
+      "text": "Person-053 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-053-label",
+          "o": "Person-053",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:053"
+        },
+        {
+          "evidence_id": "tg0-evidence-053",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:053"
+        },
+        {
+          "evidence_id": "tg0-evidence-053-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-054 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:054"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-054",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-054"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 54,
+      "text": "Person-054 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-054-label",
+          "o": "Person-054",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:054"
+        },
+        {
+          "evidence_id": "tg0-evidence-054",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:054"
+        },
+        {
+          "evidence_id": "tg0-evidence-054-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-055 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:055"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-055",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-055"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 55,
+      "text": "Person-055 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-055-label",
+          "o": "Person-055",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:055"
+        },
+        {
+          "evidence_id": "tg0-evidence-055",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:055"
+        },
+        {
+          "evidence_id": "tg0-evidence-055-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-056 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:056"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-056",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-056"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 56,
+      "text": "Person-056 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-056-label",
+          "o": "Person-056",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:056"
+        },
+        {
+          "evidence_id": "tg0-evidence-056",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:056"
+        },
+        {
+          "evidence_id": "tg0-evidence-056-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-057 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:057"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-057",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-057"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 57,
+      "text": "Person-057 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-057-label",
+          "o": "Person-057",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:057"
+        },
+        {
+          "evidence_id": "tg0-evidence-057",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:057"
+        },
+        {
+          "evidence_id": "tg0-evidence-057-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-058 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:058"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-058",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-058"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 58,
+      "text": "Person-058 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-058-label",
+          "o": "Person-058",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:058"
+        },
+        {
+          "evidence_id": "tg0-evidence-058",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:058"
+        },
+        {
+          "evidence_id": "tg0-evidence-058-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-059 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:059"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-059",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-059"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 59,
+      "text": "Person-059 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-059-label",
+          "o": "Person-059",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:059"
+        },
+        {
+          "evidence_id": "tg0-evidence-059",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:059"
+        },
+        {
+          "evidence_id": "tg0-evidence-059-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-060 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:060"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-060",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-060"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 60,
+      "text": "Person-060 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-060-label",
+          "o": "Person-060",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:060"
+        },
+        {
+          "evidence_id": "tg0-evidence-060",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:060"
+        },
+        {
+          "evidence_id": "tg0-evidence-060-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-061 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:061"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-061",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-061"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 61,
+      "text": "Person-061 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-061-label",
+          "o": "Person-061",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:061"
+        },
+        {
+          "evidence_id": "tg0-evidence-061",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:061"
+        },
+        {
+          "evidence_id": "tg0-evidence-061-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-062 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:062"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-062",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-062"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 62,
+      "text": "Person-062 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-062-label",
+          "o": "Person-062",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:062"
+        },
+        {
+          "evidence_id": "tg0-evidence-062",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:062"
+        },
+        {
+          "evidence_id": "tg0-evidence-062-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-063 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:063"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-063",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-063"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 63,
+      "text": "Person-063 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-063-label",
+          "o": "Person-063",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:063"
+        },
+        {
+          "evidence_id": "tg0-evidence-063",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:063"
+        },
+        {
+          "evidence_id": "tg0-evidence-063-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-064 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:064"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-064",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-064"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 64,
+      "text": "Person-064 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-064-label",
+          "o": "Person-064",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:064"
+        },
+        {
+          "evidence_id": "tg0-evidence-064",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:064"
+        },
+        {
+          "evidence_id": "tg0-evidence-064-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-065 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:065"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-065",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-065"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 65,
+      "text": "Person-065 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-065-label",
+          "o": "Person-065",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:065"
+        },
+        {
+          "evidence_id": "tg0-evidence-065",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:065"
+        },
+        {
+          "evidence_id": "tg0-evidence-065-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-066 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:066"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-066",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-066"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 66,
+      "text": "Person-066 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-066-label",
+          "o": "Person-066",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:066"
+        },
+        {
+          "evidence_id": "tg0-evidence-066",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:066"
+        },
+        {
+          "evidence_id": "tg0-evidence-066-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-067 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:067"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-067",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-067"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 67,
+      "text": "Person-067 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-067-label",
+          "o": "Person-067",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:067"
+        },
+        {
+          "evidence_id": "tg0-evidence-067",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:067"
+        },
+        {
+          "evidence_id": "tg0-evidence-067-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-068 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:068"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-068",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-068"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 68,
+      "text": "Person-068 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-068-label",
+          "o": "Person-068",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:068"
+        },
+        {
+          "evidence_id": "tg0-evidence-068",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:068"
+        },
+        {
+          "evidence_id": "tg0-evidence-068-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-069 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:069"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-069",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-069"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 69,
+      "text": "Person-069 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-069-label",
+          "o": "Person-069",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:069"
+        },
+        {
+          "evidence_id": "tg0-evidence-069",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:069"
+        },
+        {
+          "evidence_id": "tg0-evidence-069-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-070 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:070"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-070",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-070"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 70,
+      "text": "Person-070 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-070-label",
+          "o": "Person-070",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:070"
+        },
+        {
+          "evidence_id": "tg0-evidence-070",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:070"
+        },
+        {
+          "evidence_id": "tg0-evidence-070-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-071 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:071"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-071",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-071"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 71,
+      "text": "Person-071 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-071-label",
+          "o": "Person-071",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:071"
+        },
+        {
+          "evidence_id": "tg0-evidence-071",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:071"
+        },
+        {
+          "evidence_id": "tg0-evidence-071-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-072 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:072"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-072",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-072"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 72,
+      "text": "Person-072 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-072-label",
+          "o": "Person-072",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:072"
+        },
+        {
+          "evidence_id": "tg0-evidence-072",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:072"
+        },
+        {
+          "evidence_id": "tg0-evidence-072-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-073 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:073"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-073",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-073"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 73,
+      "text": "Person-073 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-073-label",
+          "o": "Person-073",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:073"
+        },
+        {
+          "evidence_id": "tg0-evidence-073",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:073"
+        },
+        {
+          "evidence_id": "tg0-evidence-073-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-074 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:074"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-074",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-074"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 74,
+      "text": "Person-074 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-074-label",
+          "o": "Person-074",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:074"
+        },
+        {
+          "evidence_id": "tg0-evidence-074",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:074"
+        },
+        {
+          "evidence_id": "tg0-evidence-074-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-075 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:075"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-075",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-075"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 75,
+      "text": "Person-075 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-075-label",
+          "o": "Person-075",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:075"
+        },
+        {
+          "evidence_id": "tg0-evidence-075",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:075"
+        },
+        {
+          "evidence_id": "tg0-evidence-075-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-076 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:076"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-076",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-076"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 76,
+      "text": "Person-076 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-076-label",
+          "o": "Person-076",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:076"
+        },
+        {
+          "evidence_id": "tg0-evidence-076",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:076"
+        },
+        {
+          "evidence_id": "tg0-evidence-076-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-077 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:077"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-077",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-077"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 77,
+      "text": "Person-077 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-077-label",
+          "o": "Person-077",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:077"
+        },
+        {
+          "evidence_id": "tg0-evidence-077",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:077"
+        },
+        {
+          "evidence_id": "tg0-evidence-077-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-078 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:078"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-078",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-078"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 78,
+      "text": "Person-078 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-078-label",
+          "o": "Person-078",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:078"
+        },
+        {
+          "evidence_id": "tg0-evidence-078",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:078"
+        },
+        {
+          "evidence_id": "tg0-evidence-078-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-079 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:079"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-079",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-079"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 79,
+      "text": "Person-079 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-079-label",
+          "o": "Person-079",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:079"
+        },
+        {
+          "evidence_id": "tg0-evidence-079",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:079"
+        },
+        {
+          "evidence_id": "tg0-evidence-079-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-080 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:080"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-080",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-080"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 80,
+      "text": "Person-080 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-080-label",
+          "o": "Person-080",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:080"
+        },
+        {
+          "evidence_id": "tg0-evidence-080",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:080"
+        },
+        {
+          "evidence_id": "tg0-evidence-080-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-081 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:081"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-081",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-081"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 81,
+      "text": "Person-081 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-081-label",
+          "o": "Person-081",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:081"
+        },
+        {
+          "evidence_id": "tg0-evidence-081",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:081"
+        },
+        {
+          "evidence_id": "tg0-evidence-081-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-082 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:082"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-082",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-082"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 82,
+      "text": "Person-082 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-082-label",
+          "o": "Person-082",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:082"
+        },
+        {
+          "evidence_id": "tg0-evidence-082",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:082"
+        },
+        {
+          "evidence_id": "tg0-evidence-082-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-083 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:083"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-083",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-083"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 83,
+      "text": "Person-083 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-083-label",
+          "o": "Person-083",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:083"
+        },
+        {
+          "evidence_id": "tg0-evidence-083",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:083"
+        },
+        {
+          "evidence_id": "tg0-evidence-083-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-084 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:084"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-084",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-084"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 84,
+      "text": "Person-084 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-084-label",
+          "o": "Person-084",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:084"
+        },
+        {
+          "evidence_id": "tg0-evidence-084",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:084"
+        },
+        {
+          "evidence_id": "tg0-evidence-084-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-085 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:085"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-085",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-085"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 85,
+      "text": "Person-085 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-085-label",
+          "o": "Person-085",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:085"
+        },
+        {
+          "evidence_id": "tg0-evidence-085",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:085"
+        },
+        {
+          "evidence_id": "tg0-evidence-085-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-086 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:086"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-086",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-086"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 86,
+      "text": "Person-086 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-086-label",
+          "o": "Person-086",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:086"
+        },
+        {
+          "evidence_id": "tg0-evidence-086",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:086"
+        },
+        {
+          "evidence_id": "tg0-evidence-086-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-087 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:087"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-087",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-087"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 87,
+      "text": "Person-087 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-087-label",
+          "o": "Person-087",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:087"
+        },
+        {
+          "evidence_id": "tg0-evidence-087",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:087"
+        },
+        {
+          "evidence_id": "tg0-evidence-087-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-088 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:088"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-088",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-088"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 88,
+      "text": "Person-088 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-088-label",
+          "o": "Person-088",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:088"
+        },
+        {
+          "evidence_id": "tg0-evidence-088",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:088"
+        },
+        {
+          "evidence_id": "tg0-evidence-088-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-089 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:089"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-089",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-089"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 89,
+      "text": "Person-089 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-089-label",
+          "o": "Person-089",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:089"
+        },
+        {
+          "evidence_id": "tg0-evidence-089",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:089"
+        },
+        {
+          "evidence_id": "tg0-evidence-089-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-090 lives in City-00.",
+          "entity": "urn:pmsb:tg0:person:090"
+        },
+        {
+          "context": "City-00",
+          "entity": "urn:pmsb:tg0:city:00"
+        }
+      ],
+      "event_id": "tg0-event-090",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-090"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 90,
+      "text": "Person-090 lives in City-00.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-090-label",
+          "o": "Person-090",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:090"
+        },
+        {
+          "evidence_id": "tg0-evidence-090",
+          "o": "urn:pmsb:tg0:city:00",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:090"
+        },
+        {
+          "evidence_id": "tg0-evidence-090-city-label",
+          "o": "City-00",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:00"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-091 mora em City-01.",
+          "entity": "urn:pmsb:tg0:person:091"
+        },
+        {
+          "context": "City-01",
+          "entity": "urn:pmsb:tg0:city:01"
+        }
+      ],
+      "event_id": "tg0-event-091",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-091"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 91,
+      "text": "Person-091 mora em City-01.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-091-label",
+          "o": "Person-091",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:091"
+        },
+        {
+          "evidence_id": "tg0-evidence-091",
+          "o": "urn:pmsb:tg0:city:01",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:091"
+        },
+        {
+          "evidence_id": "tg0-evidence-091-city-label",
+          "o": "City-01",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:01"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-092 lives in City-02.",
+          "entity": "urn:pmsb:tg0:person:092"
+        },
+        {
+          "context": "City-02",
+          "entity": "urn:pmsb:tg0:city:02"
+        }
+      ],
+      "event_id": "tg0-event-092",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-092"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 92,
+      "text": "Person-092 lives in City-02.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-092-label",
+          "o": "Person-092",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:092"
+        },
+        {
+          "evidence_id": "tg0-evidence-092",
+          "o": "urn:pmsb:tg0:city:02",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:092"
+        },
+        {
+          "evidence_id": "tg0-evidence-092-city-label",
+          "o": "City-02",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:02"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-093 mora em City-03.",
+          "entity": "urn:pmsb:tg0:person:093"
+        },
+        {
+          "context": "City-03",
+          "entity": "urn:pmsb:tg0:city:03"
+        }
+      ],
+      "event_id": "tg0-event-093",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-093"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 93,
+      "text": "Person-093 mora em City-03.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-093-label",
+          "o": "Person-093",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:093"
+        },
+        {
+          "evidence_id": "tg0-evidence-093",
+          "o": "urn:pmsb:tg0:city:03",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:093"
+        },
+        {
+          "evidence_id": "tg0-evidence-093-city-label",
+          "o": "City-03",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:03"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-094 lives in City-04.",
+          "entity": "urn:pmsb:tg0:person:094"
+        },
+        {
+          "context": "City-04",
+          "entity": "urn:pmsb:tg0:city:04"
+        }
+      ],
+      "event_id": "tg0-event-094",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-094"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 94,
+      "text": "Person-094 lives in City-04.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-094-label",
+          "o": "Person-094",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:094"
+        },
+        {
+          "evidence_id": "tg0-evidence-094",
+          "o": "urn:pmsb:tg0:city:04",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:094"
+        },
+        {
+          "evidence_id": "tg0-evidence-094-city-label",
+          "o": "City-04",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:04"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-095 mora em City-05.",
+          "entity": "urn:pmsb:tg0:person:095"
+        },
+        {
+          "context": "City-05",
+          "entity": "urn:pmsb:tg0:city:05"
+        }
+      ],
+      "event_id": "tg0-event-095",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-095"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 95,
+      "text": "Person-095 mora em City-05.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-095-label",
+          "o": "Person-095",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:095"
+        },
+        {
+          "evidence_id": "tg0-evidence-095",
+          "o": "urn:pmsb:tg0:city:05",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:095"
+        },
+        {
+          "evidence_id": "tg0-evidence-095-city-label",
+          "o": "City-05",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:05"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-096 lives in City-06.",
+          "entity": "urn:pmsb:tg0:person:096"
+        },
+        {
+          "context": "City-06",
+          "entity": "urn:pmsb:tg0:city:06"
+        }
+      ],
+      "event_id": "tg0-event-096",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-096"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 96,
+      "text": "Person-096 lives in City-06.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-096-label",
+          "o": "Person-096",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:096"
+        },
+        {
+          "evidence_id": "tg0-evidence-096",
+          "o": "urn:pmsb:tg0:city:06",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:096"
+        },
+        {
+          "evidence_id": "tg0-evidence-096-city-label",
+          "o": "City-06",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:06"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-097 mora em City-07.",
+          "entity": "urn:pmsb:tg0:person:097"
+        },
+        {
+          "context": "City-07",
+          "entity": "urn:pmsb:tg0:city:07"
+        }
+      ],
+      "event_id": "tg0-event-097",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-097"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 97,
+      "text": "Person-097 mora em City-07.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-097-label",
+          "o": "Person-097",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:097"
+        },
+        {
+          "evidence_id": "tg0-evidence-097",
+          "o": "urn:pmsb:tg0:city:07",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:097"
+        },
+        {
+          "evidence_id": "tg0-evidence-097-city-label",
+          "o": "City-07",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:07"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-098 lives in City-08.",
+          "entity": "urn:pmsb:tg0:person:098"
+        },
+        {
+          "context": "City-08",
+          "entity": "urn:pmsb:tg0:city:08"
+        }
+      ],
+      "event_id": "tg0-event-098",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-098"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 98,
+      "text": "Person-098 lives in City-08.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-098-label",
+          "o": "Person-098",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:098"
+        },
+        {
+          "evidence_id": "tg0-evidence-098",
+          "o": "urn:pmsb:tg0:city:08",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:098"
+        },
+        {
+          "evidence_id": "tg0-evidence-098-city-label",
+          "o": "City-08",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:08"
+        }
+      ]
+    },
+    {
+      "entity_contexts": [
+        {
+          "context": "Person-099 mora em City-09.",
+          "entity": "urn:pmsb:tg0:person:099"
+        },
+        {
+          "context": "City-09",
+          "entity": "urn:pmsb:tg0:city:09"
+        }
+      ],
+      "event_id": "tg0-event-099",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "relevant_evidence_ids": [
+        "tg0-evidence-099"
+      ],
+      "schema_version": "tg-event-v1",
+      "sequence": 99,
+      "text": "Person-099 mora em City-09.",
+      "triples": [
+        {
+          "evidence_id": "tg0-evidence-099-label",
+          "o": "Person-099",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:person:099"
+        },
+        {
+          "evidence_id": "tg0-evidence-099",
+          "o": "urn:pmsb:tg0:city:09",
+          "object_type": "iri",
+          "p": "urn:pmsb:tg0:lives-in",
+          "s": "urn:pmsb:tg0:person:099"
+        },
+        {
+          "evidence_id": "tg0-evidence-099-city-label",
+          "o": "City-09",
+          "object_type": "literal",
+          "p": "http://www.w3.org/2000/01/rdf-schema#label",
+          "s": "urn:pmsb:tg0:city:09"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "expected_answer": "City-00",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-000",
+      "query_type": "single-hop-paraphrase",
+      "question": "Which city is Person-000 associated with?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-000"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-001",
+      "query_type": "single-hop-paraphrase",
+      "question": "Com qual cidade Person-010 está associado?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-010"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-002",
+      "query_type": "single-hop-paraphrase",
+      "question": "Which city is Person-020 associated with?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-020"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-003",
+      "query_type": "single-hop-paraphrase",
+      "question": "Com qual cidade Person-030 está associado?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-030"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-004",
+      "query_type": "single-hop-paraphrase",
+      "question": "Which city is Person-040 associated with?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-040"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-005",
+      "query_type": "single-hop-paraphrase",
+      "question": "Com qual cidade Person-050 está associado?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-050"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-006",
+      "query_type": "single-hop-paraphrase",
+      "question": "Which city is Person-060 associated with?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-060"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-007",
+      "query_type": "single-hop-paraphrase",
+      "question": "Com qual cidade Person-070 está associado?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-070"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "en",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-008",
+      "query_type": "single-hop-paraphrase",
+      "question": "Which city is Person-080 associated with?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-080"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    },
+    {
+      "expected_answer": "City-00",
+      "language": "pt-BR",
+      "namespace": "tg0-smoke",
+      "query_id": "tg0-query-009",
+      "query_type": "single-hop-paraphrase",
+      "question": "Com qual cidade Person-090 está associado?",
+      "relevant_evidence_ids": [
+        "tg0-evidence-090"
+      ],
+      "schema_version": "tg-query-v1",
+      "should_abstain": false
+    }
+  ],
+  "schema_version": "tg-workload-v1",
+  "seed": 20260811,
+  "sha256": "f3ccd367d4c34e9520aa9bf07ae8c769d39b925846b67ea99f79456eaca132d1"
+}

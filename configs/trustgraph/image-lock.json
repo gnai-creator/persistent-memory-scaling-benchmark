@@ -1,0 +1,18 @@
+{
+  "schema_version": "tg-image-lock-v1",
+  "captured_at": "2026-08-11T04:49:08Z",
+  "images": {
+    "alpine:3.23.2": "sha256:865b95f46d98cf867a156fe4a135ad3fe50d2056aa3f25ed31662dff6da4eb62",
+    "apachepulsar/pulsar:4.2.1": "sha256:951917ef3b285ccbcdb73c5fd75149406be74e89379485b4224df28d7f1cec87",
+    "cassandra:5.0.8": "sha256:259578bbeac315a7326c2a99e60eab86f3415e9e895207bf2a032af4de8c16b5",
+    "dxflrs/garage:v2.3.0": "sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690",
+    "grafana/grafana:13.0.1": "sha256:0f86bada30d65ef9d0183b90c1e2682ac92d53d95da8bed322b984ea78a4a73a",
+    "grafana/loki:3.7.2": "sha256:191d4fdfb7264f16989f0a57f320872620a5a7c2ceeec6229212c4190ec49b86",
+    "prom/prometheus:v3.11.3": "sha256:e4254400b85610324913f0dc4acf92603d9984e7519414c5a12811aa6146acc3",
+    "qdrant/qdrant:v1.18.0": "sha256:b3063c673f3973877c038eeecc392bad5011f072ee7892b56c9a8e204a3bdea9",
+    "trustgraph/ddg-mcp-server:0.1.1": "sha256:0376df9ff0ffaaa7348b21f63d58090692819e902bbca2768b22b95038bffee4",
+    "trustgraph/trustgraph-docling:2.8.12": "sha256:778594310c66cfeff21450cf02bff1d3501687db4b6420b1ef12f77b0fa18da6",
+    "trustgraph/trustgraph-flow:2.8.12": "sha256:a8cf1a2e2c7a013a6b3a4bf0387d8c3b5ea7dcc042b03d4bb472cb796e8e98bb",
+    "trustgraph/trustgraph-ui:1.2.3": "sha256:32908ba78a7ca7b64668480479fb2ae2a6a4e5e0327736bda069e8e68ddb303a"
+  }
+}

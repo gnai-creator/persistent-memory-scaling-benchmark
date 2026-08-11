@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aletheion.ai/schemas/pmsb/tg-event-v1.json",
+  "title": "PMSB TrustGraph event v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "sequence", "namespace", "language", "text", "triples", "entity_contexts", "relevant_evidence_ids"],
+  "properties": {
+    "schema_version": {"const": "tg-event-v1"},
+    "event_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 0},
+    "namespace": {"type": "string", "minLength": 1},
+    "language": {"enum": ["en", "pt-BR"]},
+    "text": {"type": "string", "minLength": 1},
+    "triples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "s", "p", "o", "object_type"],
+        "properties": {
+          "evidence_id": {"type": "string", "minLength": 1},
+          "s": {"type": "string", "minLength": 1},
+          "p": {"type": "string", "minLength": 1},
+          "o": {"type": "string", "minLength": 1},
+          "object_type": {"enum": ["iri", "literal"]}
+        }
+      }
+    },
+    "entity_contexts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["entity", "context"],
+        "properties": {
+          "entity": {"type": "string", "minLength": 1},
+          "context": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "relevant_evidence_ids": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  }
+}

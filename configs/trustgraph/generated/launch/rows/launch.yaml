@@ -1,0 +1,17 @@
+"processors":
+- "class": "trustgraph.query.rows.cassandra.Processor"
+  "params":
+    "cassandra_host": "cassandra"
+    "cassandra_replication_factor": 1
+    "concurrency": 1
+    "id": "rows-query"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"
+- "class": "trustgraph.storage.rows.cassandra.Processor"
+  "params":
+    "cassandra_host": "cassandra"
+    "cassandra_replication_factor": 1
+    "concurrency": 1
+    "id": "rows-write"
+    "pubsub_backend": "pulsar"
+    "pulsar_host": "pulsar://pulsar:6650"

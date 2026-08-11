@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aletheion.ai/schemas/pmsb/tg-metrics-snapshot-v1.json",
+  "title": "PMSB TrustGraph metrics snapshot v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_id", "phase", "created_at", "containers", "volumes", "gpu", "prometheus", "backend_logical", "totals"],
+  "properties": {
+    "schema_version": {"const": "tg-metrics-snapshot-v1"},
+    "snapshot_id": {"type": "string", "minLength": 1},
+    "phase": {"enum": ["empty", "post_ingest_idle", "query_peak", "post_query_idle", "cold", "warm"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "containers": {"type": "array"},
+    "volumes": {"type": "array"},
+    "gpu": {"type": "object"},
+    "prometheus": {"type": "object"},
+    "backend_logical": {"type": "object"},
+    "totals": {"type": "object"}
+  }
+}

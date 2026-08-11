@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aletheion.ai/schemas/pmsb/tg-evidence-v1.json",
+  "title": "PMSB retrieved evidence v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "query_id", "system", "rank", "evidence_id", "content", "source", "score"],
+  "properties": {
+    "schema_version": {"const": "tg-evidence-v1"},
+    "query_id": {"type": "string", "minLength": 1},
+    "system": {"enum": ["graph-rag", "document-rag-vector", "document-rag-keyword", "document-rag-hybrid", "structured", "oracle", "no-memory"]},
+    "rank": {"type": "integer", "minimum": 1},
+    "evidence_id": {"type": "string", "minLength": 1},
+    "content": {"type": "string"},
+    "source": {"type": "object"},
+    "score": {"type": ["number", "null"]}
+  }
+}

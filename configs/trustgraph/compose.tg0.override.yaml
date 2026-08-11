@@ -1,0 +1,7 @@
+services:
+  text-completion:
+    # The TG-0 Ollama process is bound only to this private Docker bridge
+    # address.  Using host-gateway resolved to docker0 (172.17.0.1), which is
+    # not the gateway of the generated Compose network on this host.
+    environment:
+      OLLAMA_HOST: "http://172.19.0.1:11435"

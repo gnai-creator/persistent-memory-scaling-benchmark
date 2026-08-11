@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+results/raw/
+configs/trustgraph/generated/deploy.zip
+configs/trustgraph/generated/.gitkeep
+INSTALLATION.md
