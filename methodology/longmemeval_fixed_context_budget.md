@@ -151,6 +151,24 @@ Canonical implementation and artifacts:
 The source TrustGraph answer artifact is uncompacted, but only its frozen retrieved IDs
 are reused. All systems receive newly assembled evidence under the same budget rule.
 
+## Completed divergence audit
+
+The completed 2K/28K replay confirms that the earlier 70.0% TrustGraph result must not
+be mixed with the fixed-context endpoints. The ranking is identical in all 500
+questions, but at 28K the final evidence-ID list is identical in only 49/500 cases and
+the generated prediction is identical in only 84/500 cases. Mean reader input also
+differs by +941.9 tokens in the fixed replay.
+
+This localizes the divergence downstream of retrieval, to evidence packaging,
+token-boundary truncation, memory-boundary behavior and the resulting reader prompt. It
+does not yet isolate the contribution of each factor. See
+`docs/report/017_longmemeval_fixed_context_protocol_divergence.md` for the audit and its
+publication rules.
+
+The frozen Recall@15 value is invariant across evidence budgets. Any improvement caused
+by a larger package must therefore be described as improved **budget reachability** of
+deeper ranked evidence, not as an increase in retrieval recall.
+
 ## Completed pre-control accounting
 
 Before the budget-matched reader rerun, an offline symmetric accounting pass compares

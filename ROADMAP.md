@@ -1,6 +1,6 @@
 # Persistent Memory Scaling Benchmark — Roadmap
 
-**Atualizado em:** 11 de agosto de 2026
+**Atualizado em:** 12 de agosto de 2026
 **Documento vivo:** atualizar o estado, as evidências e os links após cada execução
 
 ## Objetivo
@@ -40,6 +40,22 @@ configuração reproduzível e relatório de decisão estiverem registrados.
 | TG-6 — relatório TrustGraph | 🔒 | depende das execuções oficiais anteriores |
 | MB-0 — gate do Memory Bridge | 🔒 | desenvolvimento ocorre em `asm-memory-bridge` |
 | CMP-0 — comparação pareada | 🔒 | depende de TG-6 e MB-0 |
+
+## LongMemEval-S fixed-context control
+
+The first frozen endpoint matrix is complete for 500 questions at 2K and 28K evidence
+budgets. Four of five systems lost official answer accuracy when given 14 times more
+evidence; ASM-CM was the only system to improve. The result is scoped to this protocol
+and must not be generalized as a universal long-context effect.
+
+The protocol audit also resolved the apparent conflict with the earlier 70.0%
+TrustGraph graph-embeddings result. That artifact is an uncompacted high-context
+ablation. The fixed replay preserves the same ranking but changes the evidence package,
+so 70.0%, 39.0% and 33.6% are not interchangeable endpoints. The remaining diagnostic
+is a crossed packing/truncation ablation.
+
+Canonical report:
+[docs/report/017_longmemeval_fixed_context_protocol_divergence.md](docs/report/017_longmemeval_fixed_context_protocol_divergence.md).
 
 ## Decisões congeladas
 
