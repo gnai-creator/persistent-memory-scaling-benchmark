@@ -127,6 +127,33 @@ def _save(path: Path, payload: dict[str, Any]) -> None:
     temporary.replace(path)
 
 
+def _is_resumable_row(row: dict[str, Any]) -> bool:
+    """Exclude infrastructure failures that were recorded only to keep a run moving."""
+    error = str(row.get("reader_failure_error", "")).lower()
+    return not any(marker in error for marker in (
+        "credit_balance_exhausted",
+        "insufficient_quota",
+        "you have no credits remaining",
+    ))
+
+
+def _seed_rows(
+    payload: dict[str, Any], *, systems: tuple[str, ...], budgets: list[int],
+    evaluation_ids: list[str],
+) -> list[dict[str, Any]]:
+    """Select compatible, billable results from a broader checkpoint."""
+    allowed_systems = set(systems)
+    allowed_budgets = set(budgets)
+    allowed_questions = set(evaluation_ids)
+    return [
+        row for row in payload.get("rows", [])
+        if str(row.get("system")) in allowed_systems
+        and int(row.get("evidence_token_budget", -1)) in allowed_budgets
+        and str(row.get("question_id")) in allowed_questions
+        and _is_resumable_row(row)
+    ]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--asm-root", type=Path, required=True)
@@ -137,6 +164,10 @@ def main() -> int:
     parser.add_argument("--official-evaluator-root", type=Path, required=True)
     parser.add_argument("--official-python", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--resume-from", type=Path,
+        help="seed a new output with compatible valid rows from another checkpoint",
+    )
     parser.add_argument("--budgets", type=int, nargs="+", default=list(DEFAULT_BUDGETS))
     parser.add_argument("--max-examples", type=int, default=0)
     parser.add_argument("--reader-model", default="gpt-4o")
@@ -210,6 +241,15 @@ def main() -> int:
         if not _resume_protocol_is_compatible(dict(previous.get("protocol", {})), protocol):
             raise ValueError("cannot resume with a different fixed-context protocol")
         rows = list(previous.get("rows", []))
+    elif args.resume_from:
+        previous = json.loads(args.resume_from.read_text(encoding="utf-8"))
+        rows = _seed_rows(
+            previous,
+            systems=selected_systems,
+            budgets=args.budgets,
+            evaluation_ids=evaluation_ids,
+        )
+        _save(args.output, {"protocol": protocol, "rows": rows, "complete": False})
     completed = {(row["system"], int(row["evidence_token_budget"]), row["question_id"]) for row in rows}
     reader = OpenAIResponsesReader(
         model=args.reader_model,

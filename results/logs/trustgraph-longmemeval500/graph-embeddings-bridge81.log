@@ -1,0 +1,283 @@
+[1/500] recall=1 score=0.000 tokens=1741
+[2/500] recall=1 score=0.000 tokens=1790
+[3/500] recall=1 score=0.000 tokens=1799
+[4/500] recall=1 score=0.105 tokens=1790
+[5/500] recall=1 score=0.000 tokens=1765
+[6/500] recall=1 score=1.000 tokens=1769
+[7/500] recall=1 score=1.000 tokens=1729
+[8/500] recall=1 score=1.000 tokens=1769
+[9/500] recall=1 score=0.125 tokens=1725
+[10/500] recall=1 score=0.400 tokens=1784
+[11/500] recall=1 score=0.000 tokens=1784
+[12/500] recall=1 score=1.000 tokens=1798
+[13/500] recall=1 score=1.000 tokens=1707
+[14/500] recall=0 score=0.000 tokens=1648
+[15/500] recall=0 score=0.000 tokens=1761
+[16/500] recall=1 score=1.000 tokens=1752
+[17/500] recall=1 score=1.000 tokens=1849
+[18/500] recall=1 score=0.000 tokens=1795
+[19/500] recall=1 score=0.000 tokens=2335
+[20/500] recall=1 score=1.000 tokens=1720
+[21/500] recall=1 score=1.000 tokens=1813
+[22/500] recall=1 score=1.000 tokens=1709
+[23/500] recall=1 score=1.000 tokens=1835
+[24/500] recall=1 score=0.000 tokens=1756
+[25/500] recall=1 score=0.000 tokens=1838
+[26/500] recall=1 score=1.000 tokens=1806
+[27/500] recall=1 score=0.000 tokens=1901
+[28/500] recall=1 score=0.000 tokens=1827
+[29/500] recall=1 score=0.000 tokens=1801
+[30/500] recall=1 score=0.000 tokens=1750
+[31/500] recall=1 score=0.000 tokens=1776
+[32/500] recall=1 score=0.118 tokens=1792
+[33/500] recall=1 score=0.000 tokens=1716
+[34/500] recall=1 score=0.000 tokens=1722
+[35/500] recall=1 score=0.000 tokens=1787
+[36/500] recall=1 score=1.000 tokens=1865
+[37/500] recall=1 score=1.000 tokens=1791
+[38/500] recall=1 score=0.000 tokens=1719
+[39/500] recall=0 score=0.154 tokens=1772
+[40/500] recall=1 score=0.000 tokens=1686
+[41/500] recall=1 score=0.000 tokens=1668
+[42/500] recall=1 score=0.000 tokens=1789
+[43/500] recall=1 score=1.000 tokens=1807
+[44/500] recall=1 score=1.000 tokens=1780
+[45/500] recall=1 score=0.000 tokens=1533
+[46/500] recall=1 score=0.400 tokens=1852
+[47/500] recall=1 score=1.000 tokens=1836
+[48/500] recall=1 score=1.000 tokens=1796
+[49/500] recall=1 score=0.000 tokens=1803
+[50/500] recall=1 score=1.000 tokens=2041
+[51/500] recall=1 score=0.000 tokens=1997
+[52/500] recall=1 score=1.000 tokens=1767
+[53/500] recall=1 score=1.000 tokens=1808
+[54/500] recall=1 score=1.000 tokens=1759
+[55/500] recall=1 score=0.000 tokens=1797
+[56/500] recall=1 score=0.429 tokens=1614
+[57/500] recall=1 score=1.000 tokens=1784
+[58/500] recall=1 score=0.000 tokens=1747
+[59/500] recall=1 score=1.000 tokens=1726
+[60/500] recall=1 score=0.000 tokens=1822
+[61/500] recall=1 score=0.000 tokens=1815
+[62/500] recall=1 score=0.000 tokens=1581
+[63/500] recall=1 score=0.286 tokens=1805
+[64/500] recall=0 score=0.000 tokens=1745
+[65/500] recall=1 score=0.231 tokens=1593
+[66/500] recall=1 score=0.370 tokens=1663
+[67/500] recall=1 score=0.438 tokens=1808
+[68/500] recall=1 score=0.296 tokens=1802
+[69/500] recall=1 score=0.000 tokens=1762
+[70/500] recall=1 score=0.412 tokens=1863
+[71/500] recall=1 score=0.000 tokens=1841
+[72/500] recall=0 score=0.000 tokens=1710
+[73/500] recall=1 score=0.605 tokens=1869
+[74/500] recall=1 score=1.000 tokens=1807
+[75/500] recall=1 score=0.077 tokens=1864
+[76/500] recall=1 score=0.000 tokens=1814
+[77/500] recall=1 score=0.000 tokens=1888
+[78/500] recall=1 score=0.333 tokens=1867
+[79/500] recall=1 score=0.370 tokens=1758
+[80/500] recall=1 score=1.000 tokens=1810
+[81/500] recall=1 score=0.000 tokens=1818
+[82/500] recall=1 score=0.261 tokens=1773
+[83/500] recall=1 score=1.000 tokens=1719
+[84/500] recall=1 score=0.000 tokens=1837
+[85/500] recall=1 score=1.000 tokens=1780
+[86/500] recall=1 score=0.044 tokens=1784
+[87/500] recall=1 score=0.227 tokens=1785
+[88/500] recall=1 score=0.000 tokens=1913
+[89/500] recall=1 score=0.000 tokens=1779
+[90/500] recall=1 score=0.000 tokens=1870
+[91/500] recall=1 score=0.000 tokens=1677
+[92/500] recall=1 score=0.000 tokens=1859
+[93/500] recall=1 score=0.298 tokens=1790
+[94/500] recall=1 score=0.000 tokens=1831
+[95/500] recall=1 score=0.000 tokens=1804
+[96/500] recall=1 score=0.000 tokens=1776
+[97/500] recall=1 score=0.000 tokens=1805
+[98/500] recall=1 score=0.000 tokens=1841
+[99/500] recall=1 score=0.000 tokens=1746
+[100/500] recall=1 score=0.000 tokens=1778
+[101/500] recall=1 score=0.000 tokens=1787
+[102/500] recall=1 score=0.162 tokens=1857
+[103/500] recall=1 score=0.000 tokens=1772
+[104/500] recall=1 score=0.000 tokens=1859
+[105/500] recall=1 score=0.000 tokens=1832
+[106/500] recall=1 score=0.080 tokens=1742
+[107/500] recall=1 score=0.000 tokens=1785
+[108/500] recall=1 score=0.000 tokens=1798
+[109/500] recall=1 score=0.000 tokens=1699
+[110/500] recall=1 score=0.246 tokens=1797
+[111/500] recall=1 score=0.000 tokens=1826
+[112/500] recall=1 score=1.000 tokens=1751
+[113/500] recall=1 score=0.000 tokens=1798
+[114/500] recall=1 score=0.444 tokens=1819
+[115/500] recall=1 score=0.044 tokens=1818
+[116/500] recall=1 score=0.000 tokens=1491
+[117/500] recall=1 score=0.053 tokens=1789
+[118/500] recall=0 score=0.000 tokens=1753
+[119/500] recall=1 score=0.000 tokens=1776
+[120/500] recall=1 score=0.000 tokens=1777
+[121/500] recall=0 score=0.000 tokens=1722
+[122/500] recall=1 score=0.000 tokens=1684
+[123/500] recall=1 score=0.000 tokens=1794
+[124/500] recall=1 score=0.040 tokens=1707
+[125/500] recall=1 score=1.000 tokens=1867
+[126/500] recall=1 score=0.000 tokens=1737
+[127/500] recall=1 score=0.000 tokens=1852
+[128/500] recall=1 score=0.348 tokens=1739
+[129/500] recall=1 score=0.333 tokens=1913
+[130/500] recall=1 score=0.333 tokens=1833
+[131/500] recall=1 score=0.414 tokens=1815
+[132/500] recall=1 score=0.436 tokens=1790
+[133/500] recall=1 score=0.185 tokens=1727
+[134/500] recall=1 score=0.133 tokens=1805
+[135/500] recall=1 score=0.200 tokens=1768
+[136/500] recall=1 score=0.000 tokens=1805
+[137/500] recall=1 score=0.000 tokens=1776
+[138/500] recall=1 score=0.182 tokens=1740
+[139/500] recall=1 score=0.212 tokens=1722
+[140/500] recall=1 score=0.222 tokens=1757
+[141/500] recall=1 score=0.227 tokens=1823
+[142/500] recall=1 score=0.191 tokens=1759
+[143/500] recall=1 score=0.282 tokens=1821
+[144/500] recall=1 score=0.207 tokens=1755
+[145/500] recall=1 score=0.108 tokens=1855
+[146/500] recall=1 score=0.152 tokens=1766
+[147/500] recall=1 score=0.177 tokens=1794
+[148/500] recall=1 score=0.056 tokens=1787
+[149/500] recall=1 score=0.188 tokens=1820
+[150/500] recall=1 score=0.254 tokens=1860
+[151/500] recall=1 score=0.200 tokens=1808
+[152/500] recall=1 score=0.232 tokens=1773
+[153/500] recall=0 score=0.100 tokens=1777
+[154/500] recall=1 score=0.279 tokens=1874
+[155/500] recall=1 score=0.183 tokens=1788
+[156/500] recall=1 score=0.192 tokens=1823
+[157/500] recall=1 score=0.189 tokens=1828
+[158/500] recall=1 score=0.166 tokens=1821
+[159/500] recall=1 score=0.257 tokens=1810
+[160/500] recall=1 score=0.260 tokens=1807
+[161/500] recall=1 score=0.103 tokens=1839
+[162/500] recall=1 score=0.200 tokens=1795
+[163/500] recall=1 score=0.118 tokens=1800
+[164/500] recall=1 score=0.000 tokens=1912
+[165/500] recall=1 score=0.000 tokens=1865
+[166/500] recall=1 score=0.000 tokens=1742
+[167/500] recall=1 score=0.000 tokens=1736
+[168/500] recall=1 score=1.000 tokens=1849
+[169/500] recall=1 score=1.000 tokens=1843
+[170/500] recall=1 score=0.000 tokens=1839
+[171/500] recall=1 score=0.000 tokens=1793
+[172/500] recall=1 score=0.000 tokens=1588
+[173/500] recall=1 score=0.000 tokens=1923
+[174/500] recall=1 score=1.000 tokens=1840
+[175/500] recall=1 score=1.000 tokens=1778
+[176/500] recall=1 score=0.000 tokens=1756
+[177/500] recall=1 score=0.000 tokens=1747
+[178/500] recall=1 score=1.000 tokens=1721
+[179/500] recall=1 score=1.000 tokens=1694
+[180/500] recall=1 score=0.000 tokens=1858
+[181/500] recall=1 score=0.000 tokens=1845
+[182/500] recall=1 score=0.000 tokens=1809
+[183/500] recall=1 score=1.000 tokens=1873
+[184/500] recall=1 score=0.000 tokens=1821
+[185/500] recall=1 score=0.222 tokens=1686
+[186/500] recall=1 score=1.000 tokens=1783
+[187/500] recall=1 score=1.000 tokens=1738
+[188/500] recall=1 score=0.276 tokens=1737
+[189/500] recall=1 score=0.043 tokens=1732
+[190/500] recall=1 score=1.000 tokens=1744
+[191/500] recall=1 score=1.000 tokens=1752
+[192/500] recall=1 score=1.000 tokens=1754
+[193/500] recall=1 score=0.174 tokens=1824
+[194/500] recall=1 score=0.000 tokens=1777
+[195/500] recall=1 score=1.000 tokens=1740
+[196/500] recall=1 score=0.167 tokens=1453
+[197/500] recall=1 score=1.000 tokens=1711
+[198/500] recall=1 score=0.000 tokens=1832
+[199/500] recall=1 score=0.125 tokens=1773
+[200/500] recall=1 score=0.160 tokens=1786
+[201/500] recall=1 score=1.000 tokens=1815
+[202/500] recall=1 score=0.000 tokens=1773
+[203/500] recall=1 score=1.000 tokens=1791
+[204/500] recall=1 score=0.000 tokens=1758
+[205/500] recall=1 score=1.000 tokens=1866
+[206/500] recall=1 score=0.000 tokens=1826
+[207/500] recall=1 score=0.000 tokens=1811
+[208/500] recall=1 score=0.333 tokens=1829
+[209/500] recall=1 score=1.000 tokens=1848
+[210/500] recall=1 score=1.000 tokens=1680
+[211/500] recall=1 score=0.000 tokens=1890
+[212/500] recall=1 score=1.000 tokens=1763
+[213/500] recall=1 score=0.000 tokens=1764
+[214/500] recall=1 score=0.000 tokens=1738
+[215/500] recall=1 score=0.000 tokens=1812
+[216/500] recall=1 score=0.000 tokens=1693
+[217/500] recall=1 score=0.105 tokens=1797
+[218/500] recall=1 score=1.000 tokens=1808
+[219/500] recall=1 score=0.000 tokens=1804
+[220/500] recall=1 score=0.133 tokens=1697
+[221/500] recall=1 score=1.000 tokens=1802
+[222/500] recall=1 score=0.000 tokens=1879
+[223/500] recall=1 score=0.000 tokens=1873
+[224/500] recall=1 score=1.000 tokens=1828
+[225/500] recall=1 score=1.000 tokens=1811
+[226/500] recall=1 score=1.000 tokens=1904
+[227/500] recall=1 score=0.000 tokens=1806
+[228/500] recall=1 score=0.541 tokens=1843
+[229/500] recall=1 score=0.194 tokens=1682
+[230/500] recall=1 score=0.233 tokens=1825
+[231/500] recall=1 score=0.562 tokens=1711
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/src/persistent_memory_scaling/trustgraph/phase81_paired.py", line 294, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/felipe/dev/ai/gitlab/persistent-memory-scaling-benchmark/src/persistent_memory_scaling/trustgraph/phase81_paired.py", line 234, in main
+    row = evaluate_one(
+        instance, "trustgraph_graph_embeddings", candidates=candidates, reader=reader,
+    ...<4 lines>...
+        evidence_transform=compactor,
+    )
+  File "/home/felipe/dev/ai/gitlab/asm-memory-bridge/benchmarks/multiwoz/phase8.py", line 147, in evaluate_one
+    answer = reader.answer(instance.query, evidence)
+  File "/home/felipe/dev/ai/gitlab/asm-memory-bridge/src/asm_memory_bridge/readers/openai.py", line 160, in answer
+    raise ReaderError("; ".join(errors))
+asm_memory_bridge.errors.ReaderError: OpenAI request failed with HTTP 429: {
+  "error": {
+    "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+    "type": "insufficient_quota",
+    "param": null,
+    "code": "credit_balance_exhausted"
+  }
+}; OpenAI request failed with HTTP 429: {
+  "error": {
+    "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+    "type": "insufficient_quota",
+    "param": null,
+    "code": "credit_balance_exhausted"
+  }
+}; OpenAI request failed with HTTP 429: {
+  "error": {
+    "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+    "type": "insufficient_quota",
+    "param": null,
+    "code": "credit_balance_exhausted"
+  }
+}; OpenAI request failed with HTTP 429: {
+  "error": {
+    "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+    "type": "insufficient_quota",
+    "param": null,
+    "code": "credit_balance_exhausted"
+  }
+}; OpenAI request failed with HTTP 429: {
+  "error": {
+    "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+    "type": "insufficient_quota",
+    "param": null,
+    "code": "credit_balance_exhausted"
+  }
+}
