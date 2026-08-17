@@ -450,6 +450,18 @@ events → Recall@K
 events → tokens delivered to LLM
 ```
 
+This is reported as a distribution, not only as a mean:
+
+```text
+events → reader-context tokens at p50 / p95 / p99
+```
+
+The context curve is always shown beside Recall@5 and answer-quality curves.
+A lower context percentile is an efficiency result only at matched or improved
+quality. The executable observation contract, quality gate, paired 10k/100k/1M
+protocol and graph generator are specified in
+[methodology/reader_context_distribution.md](methodology/reader_context_distribution.md).
+
 Together these curves describe a memory system much more completely than a single accuracy score.
 
 ---

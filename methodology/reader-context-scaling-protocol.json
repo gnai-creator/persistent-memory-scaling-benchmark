@@ -1,0 +1,10 @@
+{
+  "schema_version": "reader-context-scaling-summary-v1",
+  "measurement_status": "protocol-illustration-not-measured",
+  "interpretation_gate": "Compare context curves only at matched retrieval/answer quality; a lower token percentile alone is not an efficiency win.",
+  "points": [
+    {"system":"ASM Memory Bridge","history_events":10000,"n":0,"context_tokens":{"p50":1600,"p95":2300,"p99":2800,"mean":1750},"recall_at_5":0.90,"qa_score":0.76},
+    {"system":"ASM Memory Bridge","history_events":100000,"n":0,"context_tokens":{"p50":1800,"p95":2600,"p99":3200,"mean":1950},"recall_at_5":0.89,"qa_score":0.75},
+    {"system":"ASM Memory Bridge","history_events":1000000,"n":0,"context_tokens":{"p50":2100,"p95":3100,"p99":3900,"mean":2300},"recall_at_5":0.88,"qa_score":0.74}
+  ]
+}

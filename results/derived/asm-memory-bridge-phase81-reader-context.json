@@ -1,0 +1,24 @@
+{
+  "schema_version": "asm-operational-point-summary-v1",
+  "measurement_status": "measured-single-operational-point",
+  "system": "ASM Memory Bridge",
+  "workload": "MultiWOZ Phase 8.1",
+  "n": 979,
+  "reader_context_tokens": {
+    "mean": 1093.1848825331972,
+    "p50": 1043.0,
+    "p95": 1889.1999999999998,
+    "p99": 1996.5400000000002,
+    "total": 1070228.0
+  },
+  "recall_at_5": 0.9356486210418795,
+  "qa_score": 0.6647984127528994,
+  "provenance": {
+    "source": "/home/felipe/dev/ai/gitlab/asm-memory-bridge/runs/asm_memory_bridge_phase81_tg2_full/results.json",
+    "source_sha256": "1d05dcbc2180385e14ca43cacb00c3167ad8468abcc0dd2ce5f0879b1bf65ca9",
+    "dataset_sha256": "9f81252ab524fae264709051fad81f74900a96c6562addbba75bd8e832b3f60c",
+    "reader": "ollama:qwen3:14b",
+    "frozen_evaluation_examples": 979
+  },
+  "limitation": "One measured workload point; this is not a 10k/100k/1M history-scaling curve."
+}
