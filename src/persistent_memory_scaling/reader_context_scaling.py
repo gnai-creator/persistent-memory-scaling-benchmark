@@ -53,7 +53,7 @@ def aggregate(rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
     points = []
     for (system, history_events), selected in sorted(groups.items(), key=lambda item: (item[0][1], item[0][0])):
         tokens = [float(row["reader_context_tokens"]) for row in selected]
-        points.append({
+        point = {
             "system": system,
             "history_events": history_events,
             "n": len(selected),
@@ -65,7 +65,12 @@ def aggregate(rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
             },
             "recall_at_5": fmean(float(row["recall_at_5"]) for row in selected),
             "qa_score": fmean(float(row["qa_score"]) for row in selected),
-        })
+        }
+        if all("reader_contract_failure" in row for row in selected):
+            point["reader_contract_failure_rate"] = fmean(
+                float(bool(row["reader_contract_failure"])) for row in selected
+            )
+        points.append(point)
     return {
         "schema_version": "reader-context-scaling-summary-v1",
         "measurement_status": "measured",
@@ -83,29 +88,42 @@ def render(summary: dict[str, Any], png: Path, svg: Path) -> None:
     import matplotlib.pyplot as plt
 
     points = summary["points"]
+    recall_label = str(summary.get("recall_label", "Recall@5"))
     systems = sorted({point["system"] for point in points})
     if not points:
         raise ValueError("summary contains no points")
-    illustrative = summary.get("measurement_status") != "measured"
+    measurement_status = summary.get("measurement_status")
+    illustrative = measurement_status not in {"measured", "measured-integration-smoke"}
 
     plt.style.use("dark_background")
     figure, axes = plt.subplots(1, 2, figsize=(15, 6.5), constrained_layout=True)
-    title_suffix = "PROTOCOL ILLUSTRATION — NOT MEASURED" if illustrative else "MEASURED"
-    subject = systems[0] if len(systems) == 1 else "Reader context scaling"
+    if measurement_status == "measured-integration-smoke":
+        title_suffix = "MEASURED INTEGRATION SMOKE — NOT A SCALING RESULT"
+    else:
+        title_suffix = "PROTOCOL ILLUSTRATION — NOT MEASURED" if illustrative else "MEASURED"
+    subject = systems[0] if len(systems) == 1 else "ASM Memory Bridge vs RAG"
     figure.suptitle(f"{subject} — context scaling conditioned on quality\n{title_suffix}", fontsize=17, weight="bold")
     colors = ("#55d6be", "#7aa2f7", "#ffca5c", "#bb9af7", "#f7768e")
 
     for system, color in zip(systems, colors, strict=False):
+        display = "ASM" if system == "ASM Memory Bridge" else (
+            "RAG" if system.startswith("RAG (") else system
+        )
         selected = sorted((p for p in points if p["system"] == system), key=lambda p: p["history_events"])
         x = [p["history_events"] for p in selected]
         for quantile, style, alpha in (("p50", "-", 1), ("p95", "--", .9), ("p99", ":", .8)):
             axes[0].plot(x, [p["context_tokens"][quantile] for p in selected], marker="o",
                          linestyle=style, color=color, alpha=alpha, linewidth=2,
-                         label=f"{system} {quantile}")
+                         label=f"{display} {quantile}")
         axes[1].plot(x, [100 * p["recall_at_5"] for p in selected], "o-", color=color,
-                     linewidth=2.2, label=f"{system} Recall@5")
+                     linewidth=2.2, label=f"{display} {recall_label}")
         axes[1].plot(x, [100 * p["qa_score"] for p in selected], "s--", color=color,
-                     linewidth=1.8, alpha=.85, label=f"{system} QA")
+                     linewidth=1.8, alpha=.85, label=f"{display} QA")
+        if all("reader_contract_failure_rate" in p for p in selected):
+            axes[1].plot(
+                x, [100 * p["reader_contract_failure_rate"] for p in selected], "^:",
+                color=color, linewidth=1.5, alpha=.75, label=f"{display} contract failure",
+            )
 
     axes[0].set_title("History size → context delivered to the reader")
     axes[0].set_ylabel("Reader-context tokens per query")
@@ -116,7 +134,7 @@ def render(summary: dict[str, Any], png: Path, svg: Path) -> None:
         axis.set_xscale("log")
         axis.set_xlabel("Historical events (log scale)")
         axis.grid(alpha=.2)
-        axis.legend(fontsize=8, ncol=2)
+        axis.legend(fontsize=7, ncol=2)
     png.parent.mkdir(parents=True, exist_ok=True)
     figure.savefig(png, dpi=180)
     figure.savefig(svg)

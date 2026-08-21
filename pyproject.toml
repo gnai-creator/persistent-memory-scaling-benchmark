@@ -25,6 +25,9 @@ pmsb-finalize-check = "persistent_memory_scaling.finalization:main"
 pmsb-longmemeval-fixed-context = "persistent_memory_scaling.longmemeval_fixed_context:main"
 pmsb-reader-context-scaling = "persistent_memory_scaling.reader_context_scaling:main"
 pmsb-asm-operational-point = "persistent_memory_scaling.asm_operational_point:main"
+pmsb-asm-reader-context-scaling = "persistent_memory_scaling.asm_reader_context_scaling_runner:main"
+pmsb-rag-reader-context-scaling = "persistent_memory_scaling.rag_reader_context_scaling_runner:main"
+pmsb-paired-reader-context-scaling = "persistent_memory_scaling.paired_reader_context_scaling:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

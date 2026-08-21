@@ -1,0 +1,86 @@
+{
+  "schema_version": "reader-context-scaling-summary-v1",
+  "measurement_status": "measured-integration-smoke",
+  "points": [
+    {
+      "system": "ASM Memory Bridge",
+      "history_events": 1,
+      "n": 3,
+      "context_tokens": {
+        "p50": 1914.0,
+        "p95": 1914.0,
+        "p99": 1914.0,
+        "mean": 1914.0
+      },
+      "recall_at_5": 1.0,
+      "qa_score": 0.0,
+      "reader_contract_failure_rate": 1.0
+    },
+    {
+      "system": "RAG (SQLite FTS5/BM25)",
+      "history_events": 1,
+      "n": 3,
+      "context_tokens": {
+        "p50": 1914.0,
+        "p95": 1914.0,
+        "p99": 1914.0,
+        "mean": 1914.0
+      },
+      "recall_at_5": 1.0,
+      "qa_score": 0.0,
+      "reader_contract_failure_rate": 1.0
+    },
+    {
+      "system": "ASM Memory Bridge",
+      "history_events": 2,
+      "n": 3,
+      "context_tokens": {
+        "p50": 1836.0,
+        "p95": 1836.0,
+        "p99": 1836.0,
+        "mean": 1836.0
+      },
+      "recall_at_5": 1.0,
+      "qa_score": 0.0,
+      "reader_contract_failure_rate": 0.0
+    },
+    {
+      "system": "RAG (SQLite FTS5/BM25)",
+      "history_events": 2,
+      "n": 3,
+      "context_tokens": {
+        "p50": 1836.0,
+        "p95": 1836.0,
+        "p99": 1836.0,
+        "mean": 1836.0
+      },
+      "recall_at_5": 1.0,
+      "qa_score": 0.0,
+      "reader_contract_failure_rate": 0.0
+    }
+  ],
+  "interpretation_gate": "Compare context curves only at matched retrieval/answer quality; a lower token percentile alone is not an efficiency win.",
+  "comparison_status": "paired-measured",
+  "pairing": {
+    "same_checkpoint_queries": true,
+    "same_reader": true,
+    "asm_sha256": "0987264845cdbd7f916d4b1a79d00ec193fe2291b7ea1509b3121e161d6b3b1d",
+    "rag_sha256": "3794410c925357f197a4e75c477e83c94d4e820ae243307903472f6e54411ca2"
+  },
+  "quality_floor": {
+    "recall_at_5": 0.9,
+    "qa_score": 0.65
+  },
+  "quality_gates": [
+    {
+      "history_events": 1,
+      "passed": false,
+      "economic_comparison_authorized": false
+    },
+    {
+      "history_events": 2,
+      "passed": false,
+      "economic_comparison_authorized": false
+    }
+  ]
+}

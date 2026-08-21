@@ -461,6 +461,49 @@ A lower context percentile is an efficiency result only at matched or improved
 quality. The executable observation contract, quality gate, paired 10k/100k/1M
 protocol and graph generator are specified in
 [methodology/reader_context_distribution.md](methodology/reader_context_distribution.md).
+The frozen reader for the next ASM Memory Bridge scaling run is local Ollama
+`qwen3.5:0.8b`; its exact generation and accounting configuration is preserved in
+[`configs/asm-memory-bridge/qwen35-local-reader.json`](configs/asm-memory-bridge/qwen35-local-reader.json).
+The complete paired ASM-versus-RAG run requires no downloaded dataset and starts with:
+
+```bash
+./scripts/run_paired_reader_context_scaling.sh
+```
+
+The current scalar ASM append path measured about 22–25 seconds per event in the
+integration smoke. Runs above 1,000 events therefore require an explicit
+`ALLOW_LONG_RUN=1`; batching must be implemented before treating 1M as an
+operationally practical launch. This guard does not affect the fast RAG baseline.
+
+See the methodology link above for the smoke command, frozen-query design and
+output artifacts before starting the 1M-event run.
+
+### MultiWOZ controlled-distractor protocol
+
+The in-domain paired protocol uses the frozen, answer-supported MultiWOZ 2.2
+Phase-8 question cohort. Its relevant test dialogues remain fixed while
+deterministically ordered, disjoint training dialogues are added as cumulative
+distractors. ASM Memory Bridge and SQLite FTS5/BM25 receive the exact same
+documents and questions, with the same `top_k=5` and local `qwen3:14b` reader.
+The chart contains three measured series: full ASM evidence, Phase-8.1 compacted
+ASM evidence, and RAG evidence. Both ASM variants reuse the same retrieved IDs;
+only the evidence package sent to the reader changes.
+
+Run a short pilot first:
+
+```bash
+DISTRACTORS=0,10 QUERIES=5 CHUNK_SIZE=5 \
+RUN_ROOT=results/raw/paired-multiwoz-distractors-qwen3-14b-pilot \
+./scripts/run_multiwoz_distractor_scaling.sh
+```
+
+The command is resumable. Its comparative graph is written to
+`RUN_ROOT/quality-matched.png`. By default it predeclares `top_k=5,10,20` and
+selects the smallest K per system/checkpoint reaching Recall ≥ 90% and QA ≥ 65%.
+The full sweep remains in `top-k-sweep-summary.json`; failed quality targets are
+recorded explicitly rather than plotted as economic wins. Here, the x-axis remains total history documents;
+each raw row also records `distractor_count`, and `protocol.json` records the
+fixed base-history size needed to reproduce that mapping.
 
 Together these curves describe a memory system much more completely than a single accuracy score.
 

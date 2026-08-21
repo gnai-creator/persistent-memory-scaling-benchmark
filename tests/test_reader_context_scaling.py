@@ -22,6 +22,15 @@ def test_aggregate_reports_context_distribution_and_quality() -> None:
     assert point["qa_score"] == pytest.approx(.75)
 
 
+def test_aggregate_reports_reader_contract_failure_rate_when_available() -> None:
+    rows = [
+        {"system": "asm", "history_events": 10, "reader_context_tokens": 100,
+         "recall_at_5": 1, "qa_score": 0, "reader_contract_failure": failed}
+        for failed in (True, False)
+    ]
+    assert aggregate(rows)["points"][0]["reader_contract_failure_rate"] == .5
+
+
 def test_aggregate_rejects_quality_outside_unit_interval() -> None:
     with pytest.raises(ValueError, match="qa_score outside"):
         aggregate([{"system": "x", "history_events": 1, "reader_context_tokens": 1,

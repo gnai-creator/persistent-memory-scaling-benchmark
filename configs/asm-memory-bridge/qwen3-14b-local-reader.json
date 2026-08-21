@@ -1,0 +1,26 @@
+{
+  "schema_version": "asm-reader-config-v1",
+  "provider": "ollama",
+  "base_url": "http://127.0.0.1:11434",
+  "model": "qwen3:14b",
+  "model_identity_observed": {
+    "architecture": "qwen3",
+    "parameters": "14.8B",
+    "quantization": "Q4_K_M",
+    "native_context_length": 40960
+  },
+  "generation": {
+    "temperature": 0.0,
+    "seed": 1,
+    "num_ctx": 32768,
+    "max_new_tokens": 256,
+    "think": false,
+    "format": "json",
+    "attempts": 2,
+    "retry_delay_seconds": 1.0,
+    "timeout_seconds": 180.0
+  },
+  "measurement_rule": "Use Ollama prompt_eval_count as reader_context_tokens for every query and every retry.",
+  "validation_date": "2026-08-17",
+  "local_only": true
+}
